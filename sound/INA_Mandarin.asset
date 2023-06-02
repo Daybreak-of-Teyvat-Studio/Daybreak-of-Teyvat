@@ -1,0 +1,438 @@
+
+category =
+{
+ name = "Voices"
+ soundeffects = {
+	
+	# INA
+
+	INA_infantry_idle
+	INA_infantry_neutral_combat
+	INA_infantry_positive_combat
+	INA_infantry_retreat
+	INA_infantry_move_out
+
+	SAN_infantry_idle
+	SAN_infantry_neutral_combat
+	SAN_infantry_positive_combat
+	SAN_infantry_retreat
+	SAN_infantry_move_out
+
+	ASA_infantry_idle
+	ASA_infantry_neutral_combat
+	ASA_infantry_positive_combat
+	ASA_infantry_retreat
+	ASA_infantry_move_out
+	
+	TSU_infantry_idle
+	TSU_infantry_neutral_combat
+	TSU_infantry_positive_combat
+	TSU_infantry_retreat
+	TSU_infantry_move_out
+	
+	JAP_infantry_idle
+	JAP_infantry_neutral_combat
+	JAP_infantry_positive_combat
+	JAP_infantry_retreat
+	JAP_infantry_move_out
+
+
+ }
+  compressor =
+ {
+	enabled = yes
+	pregain = 0.0
+	postgain = 2.0
+	ratio = 10.0
+	threshold = -10.0
+	attacktime = 0.030
+	releasetime = 1.2
+ }
+}
+
+########### AUDIO ASSETS
+########### INA
+sound = { 	name = "INA_Idle_001"
+	file = "Ilyich Genshin/INA_Idle_001.wav" }   
+sound = { name = "INA_Idle_002"
+	file = "Ilyich Genshin/INA_Idle_002.wav" }   
+sound = { name = "INA_Idle_003"
+	file = "Ilyich Genshin/INA_Idle_003.wav" }   
+sound = { name = "INA_Idle_004"
+	file = "Ilyich Genshin/INA_Idle_004.wav" }   
+sound = { name = "INA_Idle_005"
+	file = "Ilyich Genshin/INA_Idle_005.wav" }   
+sound = { name = "INA_Idle_006"
+	file = "Ilyich Genshin/INA_Idle_006.wav" }   
+sound = { name = "INA_Idle_007"
+	file = "Ilyich Genshin/INA_Idle_007.wav" }   
+
+
+sound = { 	name = "INA_Neutral_001"
+	file = "Ilyich Genshin/INA_Neutral_001.wav" }   
+sound = {   name = "INA_Neutral_002"
+	file = "Ilyich Genshin/INA_Neutral_002.wav" }   
+sound = { name = "INA_Neutral_003"
+	file = "Ilyich Genshin/INA_Neutral_003.wav" }  
+
+
+sound = { 	name = "INA_Positive_001"
+	file = "Ilyich Genshin/INA_Positive_001.wav" }   
+sound = {  name = "INA_Positive_002"
+	file = "Ilyich Genshin/INA_Positive_002.wav" }   
+sound = { name = "INA_Positive_003"
+	file = "Ilyich Genshin/INA_Positive_003.wav" }   
+
+sound = { 	name = "INA_Retreat_001"
+	file = "Ilyich Genshin/INA_Retreat_001.wav" }   
+sound = {  name = "INA_Retreat_002"
+	file = "Ilyich Genshin/INA_Retreat_002.wav" }   
+sound = { name = "INA_Retreat_003"
+	file = "Ilyich Genshin/INA_Retreat_003.wav" }   
+
+sound = { 	name = "INA_Moving_001"
+	file = "Ilyich Genshin/INA_Moving_001.wav" }   
+sound = {   name = "INA_Moving_002"
+	file = "Ilyich Genshin/INA_Moving_002.wav" }   
+sound = { name = "INA_Moving_003"
+	file = "Ilyich Genshin/INA_Moving_003.wav" }  
+
+########## INA
+
+soundeffect =
+{
+    name = "INA_infantry_idle"
+    sounds = {
+		sound = INA_Idle_001  sound = INA_Idle_002   sound = INA_Idle_003  sound = INA_Idle_004  sound = INA_Idle_005   sound = INA_Idle_006   sound = INA_Idle_007		
+		
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "INA_infantry_neutral_combat"
+    sounds = {
+		sound = INA_Neutral_001  sound = INA_Neutral_002  sound = INA_Neutral_003
+		
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "INA_infantry_positive_combat"
+    sounds = {
+		sound = INA_Positive_001   sound = INA_Positive_002  sound = INA_Positive_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "INA_infantry_retreat"
+    sounds = {
+		sound = INA_Retreat_001   sound = INA_Retreat_002   sound = INA_Retreat_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "INA_infantry_move_out"
+    sounds = {
+		sound = INA_Moving_001   sound = INA_Moving_002  sound = INA_Moving_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+########## SAN
+
+soundeffect =
+{
+    name = "SAN_infantry_idle"
+    sounds = {
+		sound = INA_Idle_001  sound = INA_Idle_002   sound = INA_Idle_003  sound = INA_Idle_004  sound = INA_Idle_005   sound = INA_Idle_006   sound = INA_Idle_007	
+		
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "SAN_infantry_neutral_combat"
+    sounds = {
+		sound = INA_Neutral_001  sound = INA_Neutral_002  sound = INA_Neutral_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "SAN_infantry_positive_combat"
+    sounds = {
+		sound = INA_Positive_001   sound = INA_Positive_002  sound = INA_Positive_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "SAN_infantry_retreat"
+    sounds = {
+		sound = INA_Retreat_001   sound = INA_Retreat_002   sound = INA_Retreat_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "SAN_infantry_move_out"
+    sounds = {
+		sound = INA_Moving_001   sound = INA_Moving_002  sound = INA_Moving_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+########## ASA
+
+soundeffect =
+{
+    name = "ASA_infantry_idle"
+    sounds = {
+		sound = INA_Idle_001  sound = INA_Idle_002   sound = INA_Idle_003  sound = INA_Idle_004  sound = INA_Idle_005   sound = INA_Idle_006   sound = INA_Idle_007	
+		
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "ASA_infantry_neutral_combat"
+    sounds = {
+		sound = INA_Neutral_001  sound = INA_Neutral_002  sound = INA_Neutral_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "ASA_infantry_positive_combat"
+    sounds = {
+		sound = INA_Positive_001   sound = INA_Positive_002  sound = INA_Positive_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "ASA_infantry_retreat"
+    sounds = {
+		sound = INA_Retreat_001   sound = INA_Retreat_002   sound = INA_Retreat_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "ASA_infantry_move_out"
+    sounds = {
+		sound = INA_Moving_001   sound = INA_Moving_002  sound = INA_Moving_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+########## TSU
+
+soundeffect =
+{
+    name = "TSU_infantry_idle"
+    sounds = {
+		sound = INA_Idle_001  sound = INA_Idle_002   sound = INA_Idle_003  sound = INA_Idle_004  sound = INA_Idle_005   sound = INA_Idle_006   sound = INA_Idle_007	
+	
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "TSU_infantry_neutral_combat"
+    sounds = {
+		sound = INA_Neutral_001  sound = INA_Neutral_002  sound = INA_Neutral_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "TSU_infantry_positive_combat"
+    sounds = {
+		sound = INA_Positive_001   sound = INA_Positive_002  sound = INA_Positive_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "TSU_infantry_retreat"
+    sounds = {
+		sound = INA_Retreat_001   sound = INA_Retreat_002   sound = INA_Retreat_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "TSU_infantry_move_out"
+    sounds = {
+		sound = INA_Moving_001   sound = INA_Moving_002  sound = INA_Moving_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+########## JAP
+
+soundeffect =
+{
+    name = "JAP_infantry_idle"
+    sounds = {
+		sound = INA_Idle_001  sound = INA_Idle_002   sound = INA_Idle_003  sound = INA_Idle_004  sound = INA_Idle_005   sound = INA_Idle_006   sound = INA_Idle_007	
+	
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "JAP_infantry_neutral_combat"
+    sounds = {
+		sound = INA_Neutral_001  sound = INA_Neutral_002  sound = INA_Neutral_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "JAP_infantry_positive_combat"
+    sounds = {
+		sound = INA_Positive_001   sound = INA_Positive_002  sound = INA_Positive_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "JAP_infantry_retreat"
+    sounds = {
+		sound = INA_Retreat_001   sound = INA_Retreat_002   sound = INA_Retreat_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect =
+{
+    name = "JAP_infantry_move_out"
+    sounds = {
+		sound = INA_Moving_001   sound = INA_Moving_002  sound = INA_Moving_003
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}

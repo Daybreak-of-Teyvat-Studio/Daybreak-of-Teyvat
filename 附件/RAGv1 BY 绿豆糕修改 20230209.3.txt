@@ -1,0 +1,3153 @@
+focus_tree = {
+	id = RAGv1
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = RAG
+		}
+	}
+	default = no
+	continuous_focus_position = { x=300 y=3000} #持续性国策位置
+	
+	#available 国策前提条件
+	#bypass 国策跳过条件
+	#relative_position_id = 相对国策位置
+	
+	#山雨欲来风满楼
+	focus = {
+		id = Omen
+		icon = goal_Knight
+		cost = 1.00
+		x=16
+		y=0
+		completion_reward = {  									
+			add_political_power = 150					
+		}
+	}
+	#来艮芬德家族的选择
+	focus = {
+		id = Choice_of_Ragnvindr
+		icon = goal_Ragnvindr
+		#跟随在哪个国策后
+		cost = 10.00
+		prerequisite = {
+			focus = Omen }
+		#与哪些国策排斥
+		mutually_exclusive = {
+			focus = Aristocratic_Young_Lord }
+		available = { original_tag = MOT   }
+		x=9
+		y=1
+		completion_reward = {
+		}
+	}
+	#家族少主
+	focus = {
+		id = Aristocratic_Young_Lord
+		icon = goal_RAG02
+		cost = 10.00
+		prerequisite = {
+			focus = Omen }
+			#与哪些国策排斥
+		mutually_exclusive = {
+		focus = Choice_of_Ragnvindr }
+		x=23
+		y=1
+		completion_reward = {
+		add_popularity = { ideology = neutrality popularity = 0.5 }
+		}
+	}
+	#自由者同盟
+	focus = {
+		id = Liberal_Alliance
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Choice_of_Ragnvindr }
+		x=9
+		y=2
+		completion_reward = {
+		}
+	}
+	#亲爱的迪卢克
+	focus = {
+		id = Dear_Diluk
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Liberal_Alliance }
+		x=9
+		y=3
+		completion_reward = {
+		}
+	}
+	#处理家族资产
+	focus = {
+		id = Dispose_of_aristocratic_assets
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Dear_Diluk }
+		x=7
+		y=4
+		completion_reward = {
+		}
+	}
+	#自由的土地
+	focus = {
+		id = Free_land
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Dispose_of_aristocratic_assets }
+		x=7
+		y=5
+		completion_reward = {
+		}
+	}
+	#冒险家公社
+	focus = {
+		id = Adventurer_Commune
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Free_land }
+		x=7
+		y=6
+		completion_reward = {
+		}
+	}
+	#摩拉杠杆
+	focus = {
+		id = Money_lever
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Dear_Diluk }
+		x=11
+		y=4
+		completion_reward = {
+		}
+	}
+	#击碎精神枷锁
+	focus = {
+		id = Break_the_mental_shackles
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Money_lever }
+		x=11
+		y=5
+		completion_reward = {
+		}
+	}
+	#蒙德人大会
+	focus = {
+		id = Mondstadt_people_Conference
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Break_the_mental_shackles }
+		x=11
+		y=6
+		completion_reward = {
+		}
+	}
+	#扩大同盟影响
+	focus = {
+		id = Expand_alliance_influence
+		icon = goal_Knight
+		cost = 10.00
+		prerequisite = { focus = Mondstadt_people_Conference }
+		prerequisite = { focus = Adventurer_Commune }
+		x=9
+		y=7
+		completion_reward = {
+		}
+	}
+	#旧风新吹
+	focus = {
+		id = New_atmosphere
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = top_secret_document }
+		mutually_exclusive = { focus = war_Wind_dragon_ruins }
+		mutually_exclusive = { focus = meet_surreptitiously }
+		x=4
+		y=9
+		completion_reward = {
+		}
+	}
+	#秘密会谈
+	focus = {
+		id = meet_surreptitiously
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = top_secret_document }
+		mutually_exclusive = { focus = war_Wind_dragon_ruins }
+		mutually_exclusive = { focus = New_atmosphere }
+		x=2
+		y=9
+		completion_reward = {
+		}
+	}
+	#光荣劳动
+	focus = {
+		id = Glorious_labor
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Expand_alliance_influence }
+		x=11
+		y=8
+		completion_reward = {
+		}
+	}
+	#实事求是
+	focus = {
+		id = seek_truth_from_facts
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Balance_of_fairness_and_efficiency }
+		x=11
+		y=10
+		completion_reward = {
+		}
+	}
+	#公平与效率的天平
+	focus = {
+		id = Balance_of_fairness_and_efficiency
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Glorious_labor }
+		x=11
+		y=9
+		completion_reward = {
+		}
+	}
+	#绝密文件
+	focus = {
+		id = top_secret_document
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Expand_alliance_influence }
+		x=6
+		y=8
+		completion_reward = {
+		}
+	}
+	#从商铁律
+	focus = {
+		id = Iron_law_of_doing_business
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = seek_truth_from_facts }
+		prerequisite = { focus = Balance_of_fairness_and_efficiency }
+		x=11
+		y=11
+		completion_reward = {
+		}
+	}
+	#暗夜枭雄
+	focus = {
+		id = Mot_night_hero
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Iron_law_of_doing_business }
+		x=11
+		y=12
+		completion_reward = {
+		}
+	}
+	#正义E自由
+	focus = {
+		id = Justice_E_freedom
+		cost = 5.00
+		icon = goal_Ragnvindr
+		prerequisite = { focus = Mot_night_hero }
+		x=11
+		y=14
+		completion_reward = {
+		}
+	}
+	#收回风龙废墟
+	focus = {
+		id = war_Wind_dragon_ruins
+		cost = 5.00
+		icon = goal_Ragnvindr
+		prerequisite = { focus = top_secret_document }
+		mutually_exclusive = { focus = New_atmosphere }
+		mutually_exclusive = { focus = meet_surreptitiously }
+		x=6
+		y=9
+		completion_reward = {
+		}
+	}
+	#争取清泉镇支持
+	focus = {
+		id = Strive_for_the_support_of_Qingquan_Town
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = war_Wind_dragon_ruins }
+		x=6
+		y=10
+		completion_reward = {
+		}
+	}
+	#与奔狼领合作
+	focus = {
+		id = cooperation_Wolvendom
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Strive_for_the_support_of_Qingquan_Town }
+		x=5
+		y=11
+		completion_reward = {
+		}
+	}
+	#管理雪山
+	focus = {
+		id = manage_Dragonspine
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Strive_for_the_support_of_Qingquan_Town }
+		x=7
+		y=11
+		completion_reward = {
+		}
+	}
+	#影响骑士团
+	focus = {
+		id = Influence_Knights
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = manage_Dragonspine }
+		prerequisite = { focus = cooperation_Wolvendom }
+		x=5
+		y=12
+		completion_reward = {
+		}
+	}
+	#与古恩希尔德谈判
+	focus = {
+		id = Negotiate_with_Gunnhildr_family
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Influence_Knights }
+		x=5
+		y=13
+		completion_reward = {
+		}
+	}
+	#重组教会
+	focus = {
+		id = Reorganize_Church
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Negotiate_with_Gunnhildr_family }
+		x=5
+		y=14
+		completion_reward = {
+		}
+	}
+	#使劳伦斯屈服
+	focus = {
+		id = Make_Lawrence_family_surrender
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Negotiate_with_Gunnhildr_family }
+		x=7
+		y=14
+		completion_reward = {
+		}
+	}
+	#获取蒙德领导权
+	focus = {
+		id = Gain_leadership_Mondstadt
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Make_Lawrence_family_surrender }
+		prerequisite = { focus = Justice_E_freedom }
+		prerequisite = { focus = Reorganize_Church }
+		x=9
+		y=15
+		completion_reward = {
+		}
+	}
+	#提瓦特《资本论》
+	focus = {
+		id = Teyvat_Das_Kapital
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Gain_leadership_Mondstadt }
+		x=9
+		y=16
+		completion_reward = {
+		}
+	}
+	#红色的风起地
+	focus = {
+		id = Red_wind_source
+		icon = goal_Ragnvindr
+		cost = 5.00
+		prerequisite = { focus = Teyvat_Das_Kapital }
+		x=9
+		y=17
+		completion_reward = {
+		}
+	}
+	#民威
+	#让蒙德再次伟大
+	focus = {
+		id = RAG_Make_MOT_Great_Again
+		icon = goal_RAG02
+		cost = 5.00
+		x = 23
+		y = 2
+		prerequisite = {
+			focus = Aristocratic_Young_Lord
+		}
+		available = { OR = {
+						original_tag = RAG
+					 }   }
+		mutually_exclusive = {
+
+		}
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_ideas = { Heroes_of_Night }
+					remove_ideas = { For_Knight	}					
+					set_politics = {
+							ruling_party = neutrality
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+					set_popularities = {
+							neutrality = 50
+							communism = 15
+							democratic = 10
+							fascism = 10
+							genshin = 05
+						}
+					create_country_leader = {
+							name = "Diluc"
+							desc = "Diluc_desc"
+							picture = "gfx/leaders/LY/Diluc.dds"
+							expire = "1965.1.1"
+							ideology = despotism
+							traits = {
+
+}
+}
+set_political_party = {
+    ideology = neutrality
+    popularity = 80
+}
+				}
+	}
+
+	#组建夜枭商会
+	focus = {
+		id = RAG_Form_MOT_Merchant_Association
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Make_MOT_Great_Again
+		}
+		x = 20
+		y = 3
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	#联系北国银行
+	focus = {
+		id = RAG_Contact_Northland_Bank
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Form_MOT_Merchant_Association
+		}
+		x = 20
+		y = 4
+				completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+				       add_political_power = 120
+
+					   create_faction = RAG-SNE
+					   add_to_faction = SNE
+				    }
+
+	}
+	#罗莎琳部长
+	focus = {
+		id = RAG_Secretary_Rosalynn
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Contact_Northland_Bank
+		}
+		x = 20
+		y = 5
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_research_slot = 1 }
+
+	}
+	#开办苍风军校
+	focus = {
+		id = RAG_Open_Cangfeng_Military_School
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Make_MOT_Great_Again
+		}
+		x = 23
+		y = 3
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_war_support = 0.10
+		add_ideas = gene_military_innovation
+ }
+
+	}
+	#法尔加舰事件
+	focus = {
+		id = RAG_The_Incident_With_the_USS_Falga
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Open_Cangfeng_Military_School
+		}
+		x = 23
+		y = 4
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_offsite_building = { type = dockyard level = 1 }
+		navy_experience = 25 }
+
+	}
+	#纳塔军事训练
+	focus = {
+		id = RAG_Natlan_Military_Training
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Incident_With_the_USS_Falga
+		}
+		x = 23
+		y = 5
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    army_experience = 25 air_experience = 25 navy_experience = 25 }
+
+	}
+	#蒙德之命运
+	focus = {
+		id = RAG_The_Fate_of_the_MOT
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Make_MOT_Great_Again
+		}
+		x = 26
+		y = 3
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		
+		add_political_power = 60  add_stability = 0.05 }
+
+	}
+	#至冬留学生
+	focus = {
+		id = RAG_International_Students_To_SNE
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Fate_of_the_MOT
+		}
+		x = 26
+		y = 4
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    army_experience = 25 }
+
+	}
+	#迪卢克日记
+	focus = {
+		id = RAG_Diary_of_Diluc
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_International_Students_To_SNE
+		}
+		x = 26
+		y = 5
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	#第一次蒙德统一战争
+	focus = {
+		id = RAG_The_First_MOT_Unification_War
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Natlan_Military_Training
+		}
+		prerequisite = {
+			focus = RAG_Diary_of_Diluc
+		}
+		prerequisite = {
+			focus = RAG_Secretary_Rosalynn
+		}
+		x = 23
+		y = 6
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		leave_faction = yes	
+		add_political_power = 50
+		set_state_owner = 49
+		set_state_owner = 50
+		set_state_controller = 49
+		set_state_controller = 50
+		add_ideas = gene_one_leader
+		
+		}
+
+	}
+	#西征奔狼领
+	focus = {
+		id = RAG_Head_West_To_the_Wolves
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_First_MOT_Unification_War
+		}
+		x = 20
+		y = 7
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		army_experience = 25 air_experience = 25
+						MOT = { end_puppet = AND }
+						leave_faction = yes			
+					create_wargoal = { type = puppet_wargoal_focus  target = AND }
+	} }
+	#东征清泉镇
+	focus = {
+		id = RAG_Head_east_To_Clear_Spring
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_First_MOT_Unification_War
+		}
+		x = 26
+		y = 7
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		MOT = { end_puppet = SPI }
+		leave_faction = yes	
+		declare_war_on = {
+		target = SPI
+		type = annex_everything
+						}
+		every_state = {
+		limit = {
+		is_core_of = SPI
+		}
+		add_core_of = ROOT
+						}
+		army_experience = 25 air_experience = 25 }
+
+	}
+	#夜枭国民政府
+	focus = {
+		id = RAG_Nite_Owl_National_Government
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Head_east_To_Clear_Spring
+		}
+		prerequisite = {
+			focus = RAG_Head_West_To_the_Wolves
+		}
+		x = 23
+		y = 8
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_political_power = 160 
+		declare_war_on = {
+							target = RAG
+							type = annex_everything
+						}
+						every_state = {
+							limit = {
+									is_core_of = RAG
+								}
+							add_core_of = ROOT
+						}
+		declare_war_on = {
+							target = MOT
+							type = annex_everything
+						}
+						every_state = {
+							limit = {
+									is_core_of = MOT
+								}
+							add_core_of = ROOT
+						}
+		
+		add_manpower = 64800 }
+
+	}
+
+	#兄弟外御其悔
+	focus = {
+		id = RAG_Brother_Can_Uniformly_Resist_Others_Bully
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Nite_Owl_National_Government
+		}
+		x = 19
+		y = 9
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+				       create_faction = For_MOT
+				       add_political_power = 120
+					   add_to_faction = LAW
+				    }
+	}
+	#攘外必先安内
+	focus = {
+		id = RAG_Resisting_Foreign_Aggression_Home_Safe
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Nite_Owl_National_Government
+		}
+		x = 27
+		y = 9
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+				       create_faction = For_MOT
+				       add_political_power = 120
+				    }
+	}
+	#西北易帜
+	focus = {
+		id = RAG_Changing_Northwestern_Banner
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Resisting_Foreign_Aggression_Home_Safe
+		}
+		x = 29
+		y = 10
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		declare_war_on = { 	target = DVA
+		type = annex_everything}
+		every_state = { limit = { is_core_of = DVA } add_core_of = ROOT }
+		army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+	}
+
+	#天理战争宣传
+	focus = {
+		id = RAG_War_Propaganda_For_the_PRI
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Brother_Can_Uniformly_Resist_Others_Bully
+		}
+		x = 19
+		y = 10
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_war_support = 0.15  add_stability = -0.05 }
+
+	}
+	#南方会议
+	focus = {
+		id = RAG_The_Southern_Meeting
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_War_Propaganda_For_the_PRI
+		}
+		x = 17
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	#云来海航线
+	focus = {
+		id = RAG_The_Course_of_the_Clouds
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Southern_Meeting
+		}
+		mutually_exclusive = {
+			focus = RAG_Stone_Gate_Crisis
+		}
+		x = 16
+		y = 12
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		leave_faction = yes	
+		add_fuel = 400
+		create_faction = RAG-LYY		
+		add_to_faction = LYY
+				    }
+
+	}
+	#石门危机
+	focus = {
+		id = RAG_Stone_Gate_Crisis
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Southern_Meeting
+		}
+		mutually_exclusive = {
+			focus = RAG_The_Course_of_the_Clouds
+		}
+		x = 18
+		y = 12
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		start_border_war = { 
+    change_state_after_war = no
+    attacker = { state = 63  num_provinces = 1 }			
+    defender = { state = 131  num_provinces = 1 }
+}
+}
+	}
+	#征服世界，先璃月
+	focus = {
+		id = RAG_To_Conquer_the_World_Must_First_Conquer_Liyue
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Stone_Gate_Crisis
+		}
+		x = 18
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		
+		declare_war_on = { 	target = LYY
+		type = annex_everything }
+		declare_war_on = { 	target = KQP
+		type = annex_everything }
+		declare_war_on = { 	target = GYP
+		type = annex_everything }
+		declare_war_on = { 	target = SHP
+		type = annex_everything }
+		 every_state = { limit = { is_core_of = LYY } add_core_of = ROOT }
+		 army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+
+	}
+	#提瓦特西北主战场
+	focus = {
+		id = RAG_Main_northwest_Battlefield_of_Teyvat
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Dandelion_Sea_Militia_Against_Sky
+			focus = RAG_To_Conquer_the_World_Must_First_Conquer_Liyue
+			focus = RAG_Fontaine_Railway_Technology
+		}
+		x = 19
+		y = 14
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		declare_war_on = { 	target = PRI
+		type = annex_everything}
+		every_state = { limit = { is_core_of = PRI } add_core_of = ROOT }
+		army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+
+	}
+	#黎明战法
+	focus = {
+		id = RAG_Tactics_of_the_Dawn
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Main_northwest_Battlefield_of_Teyvat
+		}
+		x = 17
+		y = 15
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    army_experience = 25 air_experience = 25 navy_experience = 25 }
+	}
+	#鹰翔口决议
+	focus = {
+		id = RAG_Eagle_Flying_Mouth_Resolution
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Tactics_of_the_Dawn
+		}
+		x = 17
+		y = 16
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	#蒙德-至冬友好同盟互助条约
+	focus = {
+		id = RAG_MOT-SNE_Treaty_of_Friendship
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Main_northwest_Battlefield_of_Teyvat
+		}
+		x = 21
+		y = 15
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		leave_faction = yes	
+				       add_political_power = 120
+
+					   create_faction = RAG-SNE
+					   add_to_faction = SNE
+				    }
+
+	}
+	#须弥远征军
+	focus = {
+		id = RAG_SUM_Expeditionary_Force
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_MOT-SNE_Treaty_of_Friendship
+		}
+		x = 20
+		y = 16
+				completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		
+				       add_political_power = 120
+					   add_to_faction = SUM
+				    }
+
+	}
+	#风龙废墟问题
+	focus = {
+		id = RAG_Dragon_Ruins_Problem
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_MOT-SNE_Treaty_of_Friendship
+		}
+		x = 22
+		y = 16
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		add_war_support = 0.1
+	every_state = { limit = { is_core_of = AND } add_core_of = ROOT }
+	declare_war_on = { 	target = DVA
+	type = annex_everything }
+	}
+	}
+	#起风地谈判
+	focus = {
+		id = RAG_Negotiations_in_the_Wind
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_War_Propaganda_For_the_PRI
+		}
+		x = 21
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+	
+	if = {  limit = { original_tag = MOT  }   
+    set_state_owner = 5
+	set_state_owner = 6
+	set_state_owner = 7
+	set_state_controller = 5
+	set_state_controller = 6
+	set_state_controller = 7
+
+     }
+		}
+
+	}
+	#蒙德新编革命第七军
+	focus = {
+		id = RAG_The_7th_Revolutionary_Army_Newly_Formed_By_MOT
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Negotiations_in_the_Wind
+		}
+		x = 21
+		y = 12
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    army_experience = 25 air_experience = 25 }
+
+	}
+	#寂烬海抗天义勇军
+	focus = {
+		id = RAG_The_Dandelion_Sea_Militia_Against_Sky
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_7th_Revolutionary_Army_Newly_Formed_By_MOT
+		}
+		x = 21
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	#星落湖会议
+	focus = {
+		id = RAG_Starfall_Lake_Conference
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Resisting_Foreign_Aggression_Home_Safe
+		}
+		
+		x = 26
+		y = 10
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		set_state_owner = 10
+	    set_state_controller = 10
+		}
+
+	}
+	#禁止抵抗命令
+	focus = {
+		id = RAG_No_Resistance_Order
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Starfall_Lake_Conference
+		}
+		x = 25
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	#果酒湖和约
+	focus = {
+		id = RAG_Peace_of_Fruit_Wine_Lake
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_No_Resistance_Order
+		}
+		x = 25
+		y = 12
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		set_state_owner = 17
+		set_state_controller = 17
+		}
+
+	}
+	#量蒙德之物力
+	focus = {
+		id = RAG_The_Amount_of_the_Material_To_MOT
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Peace_of_Fruit_Wine_Lake
+		}
+		x = 25
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = -64800 }
+
+	}
+	#肃杀冒险者协会
+	focus = {
+		id = RAG_The_Exterminating_Adventurers
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Starfall_Lake_Conference
+		}
+		x = 27
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_offsite_building = { type = arms_factory level = 1 } 
+		add_manpower = -64800 }
+
+	}
+	#风起地事变
+	focus = {
+		id = RAG_The_Coup_in_the_Wind
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Exterminating_Adventurers
+		}
+		x = 27
+		y = 12
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		every_state = { limit = { is_core_of = GUN } add_core_of = ROOT }
+	declare_war_on = { 	target = DRA
+	type = annex_everything }
+	}
+
+	}
+	#石头要过刀
+	focus = {
+		id = RAG_The_Stone_Will_Pass_the_knife
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Coup_in_the_Wind
+		}
+		x = 27
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		every_state = { limit = { is_core_of = RAG } add_core_of = ROOT }
+	declare_war_on = { 	target = LAW
+	type = annex_everything }
+	}
+
+	}
+	#大决战
+	focus = {
+		id = RAG_Armageddon
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Knot_of_Foreign_happy
+		}
+		prerequisite = {
+			focus = RAG_The_Stone_Will_Pass_the_knife
+		}
+		prerequisite = {
+			focus = RAG_The_Amount_of_the_Material_To_MOT
+		}
+		x = 27
+		y = 14
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+
+	}
+	#撕毁果酒湖和约
+	focus = {
+		id = RAG_Tear_Up_the_Peace_of_Cider_Lake
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Armageddon
+		}
+		x = 27
+		y = 15
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		declare_war_on = { 	target = ABY
+		type = annex_everything}
+		every_state = { limit = { is_core_of = ABY } add_core_of = ROOT }
+				    }
+
+	}
+	#千古完人
+	focus = {
+		id = RAG_The_One_Is_Perfect
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Tear_Up_the_Peace_of_Cider_Lake
+		}
+		x = 27
+		y = 16
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx vfile:///E:/原神mod开发/国策：迪卢克威权现 1.3.pngalue = -1 }    add_stability = 0.1 }
+
+	}
+	#灰色的风起地
+	focus = {
+		id = RAG_The_Gray_Wind_Rises
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_One_Is_Perfect
+		}
+		prerequisite = {
+			focus = RAG_Dragon_Ruins_Problem
+		}
+		prerequisite = {
+			focus = RAG_SUM_Expeditionary_Force
+		}
+		prerequisite = {
+			focus = RAG_Eagle_Flying_Mouth_Resolution
+		}
+
+		x = 23
+		y = 17
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+	add_timed_idea = { idea = For_Venti  days = 365 }	
+create_wargoal = { type = puppet_wargoal_focus  target = SNE }	
+create_wargoal = { type = puppet_wargoal_focus  target = NAT }	
+create_wargoal = { type = puppet_wargoal_focus  target = FON }	
+create_wargoal = { type = puppet_wargoal_focus  target = SUM }	
+create_wargoal = { type = puppet_wargoal_focus  target = INA }
+create_wargoal = { type = puppet_wargoal_focus  target = SAN }	
+
+	
+	}
+
+	}
+	#发动北陆大战
+	focus = {
+		id = RAG_Start_the_Great_Northern_War
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Changing_Northwestern_Banner
+		}
+		x = 29
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		declare_war_on = { 	target = MOT
+		type = annex_everything}
+		every_state = { limit = { is_core_of = MOT } add_core_of = ROOT }
+		declare_war_on = { 	target = FAV
+		type = annex_everything}
+		every_state = { limit = { is_core_of = FAV } add_core_of = ROOT }
+		army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+	}
+	#善后大借款
+	focus = {
+		id = RAG_Big_Loans_To_Clean_Up_the_Mess
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Start_the_Great_Northern_War
+		}
+		x = 29
+		y = 12
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+	add_political_power = -160
+	add_stability = 0.05
+	add_manpower = 64800
+	}
+
+	}
+	#结北国之欢心
+	focus = {
+		id = RAG_Knot_of_Foreign_happy
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Big_Loans_To_Clean_Up_the_Mess
+		}
+		x = 29
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+	add_equipment_to_stockpile = { type = infantry_equipment  amount = 10000  producer = SNE }
+	}
+	}
+	#枫丹铁路技术
+	focus = {
+		id = RAG_Fontaine_Railway_Technology
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Course_of_the_Clouds
+		}
+		x = 16
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		leave_faction = yes	
+		add_fuel = 400		
+		add_to_faction = FON
+				    }
+	}
+	
+#经济
+#蒙德边境上的走私
+	focus = {
+		id = Mondstadt_Border_smuggling
+		icon = goal_Knight
+		cost = 5.00
+		x=40
+		y=1
+		completion_reward = {  									
+			add_political_power = 160					
+		}
+	}
+#区域经济
+focus = {
+		id = regional_economies
+		icon = goal_Knight
+		cost = 5.00
+		available = { original_tag = MOT   }
+		prerequisite = { focus = Mondstadt_Border_smuggling }
+		x=40
+		y=2
+		completion_reward = {
+		}
+	}
+#来艮芬德家族财政紧缩
+focus = {
+		id = Ragnvindr_Family_financial_tightening
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = regional_economies }
+		x=40
+		y=3
+		completion_reward = {
+		}
+	}
+#战争点燃经济
+focus = {
+		id = War_ignites_economy
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Ragnvindr_Family_financial_tightening }
+		mutually_exclusive = {focus = The_first_planned_economy }
+		x=35
+		y=4
+		completion_reward = {
+		}
+	}
+#蒙德工业振兴计划
+focus = {
+		id = RAG_The_MOT_Industrial_And_Commercial_Revitalization_Program
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {  focus = War_ignites_economy  }
+		x = 35
+		y = 5
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_research_slot = 1 }
+	}
+	#圈地运动
+	focus = {
+		id = RAG_Movement_of_Enclosures
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_MOT_Industrial_And_Commercial_Revitalization_Program
+		}
+		x = 35
+		y = 6
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_stability = -0.05
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_manpower = -64800 }
+
+	}
+	#币值改革法案
+	focus = {
+		id = RAG_The_Currency_Reform_Act
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Movement_of_Enclosures
+		}
+		x = 35
+		y = 7
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+	}
+	#强占猫尾酒业
+	focus = {
+		id = RAG_Take_Over_the_Cattail_Liquor_Business
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Currency_Reform_Act
+		}
+		x = 35
+		y = 8
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_stability = -0.05
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = infrastructure level = 1 }
+		}
+	}
+	#明冠狭兵工厂
+	focus = {
+		id = RAG_Ming_Crown_Gorge_Arsenal
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Take_Over_the_Cattail_Liquor_Business
+		}
+		x = 34
+		y = 9
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    	
+		add_offsite_building = { type = arms_factory level = 1 }
+		}
+
+	}
+	#星落湖民工厂
+	focus = {
+		id = RAG_The_Factory_in_Starfall_Lake
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Take_Over_the_Cattail_Liquor_Business
+		}
+		x = 36
+		y = 9
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    	
+		add_offsite_building = { type = industrial_complex level = 1 }
+		}
+
+	}
+	#晨曦大学
+	focus = {
+		id = Dawn_University
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Factory_in_Starfall_Lake
+		}
+		prerequisite = {
+			focus = RAG_Ming_Crown_Gorge_Arsenal
+		}
+		x = 35
+		y = 10
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    	
+		add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = air_base level = 1 }
+			}
+	}
+	#苹果酒法案
+	focus = {
+		id = RAG_The_Cider_Act
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = Dawn_University
+		}
+		x = 35
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+#白铁矿开采
+focus = {
+		id = White_iron_ore_mining
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Expand_winery focus = RAG_The_MOT_Industrial_And_Commercial_Revitalization_Program }
+		x=40
+		y=6
+		completion_reward = {
+		}
+	}
+#轰轰大危机
+focus = {
+		id = Bomb_the_great_crisis
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = White_iron_ore_mining }
+		x=38
+		y=7
+		completion_reward = {
+		}
+	}
+#合成树脂
+focus = {
+		id = synthetic_resin
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = White_iron_ore_mining }
+		x=42
+		y=7
+		completion_reward = {
+		}
+	}
+#第一次计划经济
+focus = {
+		id = The_first_planned_economy
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Ragnvindr_Family_financial_tightening  }
+		mutually_exclusive = {focus = War_ignites_economy }
+		x=45
+		y=4
+		completion_reward = {
+		}
+	}
+#扩大酒厂
+focus = {
+		id = Expand_winery
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = The_first_planned_economy  }
+		x=45
+		y=5
+		completion_reward = {
+		}
+	}
+#酒水研究院
+focus = {
+		id = Wine_Research_Institute
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Expand_winery }
+		x=45
+		y=6
+		completion_reward = {
+		}
+	}
+#第二次计划经济
+focus = {
+		id = The_second_planned_economy
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Wine_Research_Institute }
+		x=45
+		y=7
+		completion_reward = {
+		}
+	}
+#宴会上的消费
+focus = {
+		id = Consumption_at_the_banquet
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = The_second_planned_economy }
+		x=43
+		y=8
+		completion_reward = {
+		}
+	}
+#情报网的开支
+focus = {
+		id = Expenditure_of_intelligence_network
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = The_second_planned_economy }
+		x=47
+		y=8
+		completion_reward = {
+		}
+	}
+#惬意生活
+focus = {
+		id = Comfortable_life
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Consumption_at_the_banquet }
+		x=43
+		y=10
+		completion_reward = {
+		}
+	}
+#隐匿的荣光
+focus = {
+		id = Hidden_glory
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Expenditure_of_intelligence_network }
+		x=47
+		y=10
+		completion_reward = {
+		}
+	}
+#酒庄繁荣
+focus = {
+		id = Winery_prosperity
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Hidden_glory }
+		prerequisite = { focus = Comfortable_life }
+		x=45
+		y=11
+		completion_reward = {
+		}
+	}
+#计划的未来
+focus = {
+		id = Planned_future
+		icon = goal_Knight
+		cost = 5.00
+		prerequisite = { focus = Winery_prosperity }
+		x=45
+		y=12
+		completion_reward = {
+		}
+	}
+#军事-陆军
+#强化骑士
+	focus = {
+		id = Strengthen_knight
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 52
+		y = 1
+		cost = 10
+
+		available = {
+			has_war_support > 0.12
+		}
+	
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+#南风之狮
+	focus = {
+		id = Lion_of_the_South_Wind
+		icon = GFX_goal_generic_army_artillery
+		x = 0
+		y = 1
+
+		prerequisite = { focus = Strengthen_knight }
+		mutually_exclusive = { focus = Wolf_of_the_North_Wind }
+		relative_position_id = Strengthen_knight
+		cost = 10
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = { FRA_firepower }
+		}
+	}
+#北风之狼
+	focus = {
+		id = Wolf_of_the_North_Wind
+		icon = GFX_goal_generic_cavalry
+		x = 4
+		y = 1
+
+		prerequisite = { focus = Strengthen_knight }
+		mutually_exclusive = { focus = Lion_of_the_South_Wind }
+		relative_position_id = Strengthen_knight
+		cost = 10
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = FRA_methodical_battle
+				category = land_doctrine
+				uses = 2
+				cost_reduction = 0.65
+			}
+		}
+	}
+#步步为营
+	focus = {
+		id = consolidate_at_every_step
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = Orderly_combat }
+		x = 0
+		y = 2
+		relative_position_id = Lion_of_the_South_Wind
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_fortification_focus
+		}
+	}
+#有序作战
+	focus = {
+		id = Orderly_combat
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = Lion_of_the_South_Wind }
+		x = 0
+		y = 1
+		relative_position_id = Lion_of_the_South_Wind
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_ideas = FRA_infantry_focus
+		}
+	}
+#检查装备
+	focus = {
+		id = Special_military_unit
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = Lion_of_the_South_Wind  focus = Wolf_of_the_North_Wind }
+		x = 2
+		y = 1
+		relative_position_id = Lion_of_the_South_Wind
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = FRA_artillery_focus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+#主战守卫
+	focus = {
+		id = Large_Ruin_Guard
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = consolidate_at_every_step }
+		x = 0
+		y = 1
+		relative_position_id = consolidate_at_every_step
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = FRA_heavy_armor_focus
+				bonus = 1.0
+				uses = 1
+				category = cat_heavy_armor
+			}
+		}
+	}
+#遗迹守卫团
+	focus = {
+		id = Ruin_Guard_Corps
+		icon = GFX_focus_generic_army_tanks2
+		x = 0
+		y = 1
+
+		prerequisite = { focus = Large_Ruin_Guard }
+		mutually_exclusive = { }
+		relative_position_id = Large_Ruin_Guard
+		cost = 10
+
+		available = {
+			OR = {
+				AND = {
+					has_tech = basic_heavy_tank
+					has_tech = basic_medium_tank
+				}
+				AND = {
+					has_tech = basic_heavy_tank_chassis
+					has_tech = basic_medium_tank_chassis
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			division_template = {
+				name = "Division Cuirassée" 	
+				division_names_group = FRA_ARM_01
+
+				regiments = {
+					medium_armor = { x = 0 y = 0 }		
+					heavy_armor = { x = 0 y = 1 }		
+					medium_armor = { x = 1 y = 0 }		
+					medium_armor = { x = 1 y = 1 }		
+					motorized = { x = 2 y = 0 }			
+					motorized = { x = 2 y = 1 }
+					motorized = { x = 2 y = 2 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }      		
+					artillery = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"1re Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_0 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2me Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_0 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
+						owner = ROOT
+					}
+				}
+			}
+			else = {
+				capital_scope = {
+					create_unit = {
+						division = "name = \"1re Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7"  
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2me Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7"  
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+
+#特种骑士
+	focus = {
+		id = special_Knight
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = Special_military_unit }
+		mutually_exclusive = { }
+		relative_position_id = Special_military_unit
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = { special_forces }
+		}
+	}
+#水中特训
+	focus = {
+		id = Underwater_training
+		icon = GFX_goal_generic_amphibious_assault
+		x = 0
+		y = 2
+
+		prerequisite = { focus = special_Knight}
+		mutually_exclusive = { }
+		relative_position_id = Special_military_unit
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_fusiliers_marine
+				category = tp_tech
+				category = marine_tech
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+
+#灵活作战
+	focus = {
+		id = Flexible_offensive
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = Wolf_of_the_North_Wind }
+		x = 0
+		y = 1
+		relative_position_id = Wolf_of_the_North_Wind
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_ideas = FRA_motorized_focus
+		}
+	}
+#急性气流
+	focus = {
+		id = Fast_airflow
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = Flexible_offensive }
+		x = 0
+		y = 1
+		relative_position_id = Flexible_offensive 
+		cost = 10
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = FRA_mechanized_focus
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+#强行军
+	focus = {
+		id = forced_march
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = Fast_airflow }
+		x = 0
+		y = 1
+		relative_position_id = Fast_airflow 
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = FRA_light_medium_armor
+				bonus = 1.0
+				uses = 1
+				category = cat_light_armor
+				category = cat_medium_armor
+			}
+		}
+	}
+#东风之龙
+	focus = {
+		id = east_wind_dragon
+		icon = GFX_goal_generic_air_fighter2
+		x = 7
+		y = 1
+		prerequisite = { focus = Strengthen_knight }
+		relative_position_id = Strengthen_knight
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = { FRA_air_dominance }
+		}
+	}
+#风史莱姆域场
+	focus = {
+		id = Wind_Slim_Field
+		icon = GFX_goal_generic_CAS
+	 	prerequisite = { 
+	 		focus = east_wind_dragon }
+		x = 0
+		y = 1
+		relative_position_id = east_wind_dragon
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_cas_focus
+				bonus = 1.0
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+#空地合作
+	focus = {
+		id = air_ground_cooperation
+		icon = GFX_goal_generic_air_bomber
+		x = 0
+		y = 2
+
+		prerequisite = { focus = Wind_Slim_Field }
+		relative_position_id = east_wind_dragon
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = FRA_air_ground_cooperation
+				category = air_doctrine
+				uses = 2
+				cost_reduction = 0.5
+			}
+		}
+	}
+#空中优势
+	focus = {
+		id = flying_artillery
+		icon = GFX_goal_poland_goal
+		x = 0
+		y = 3
+		prerequisite = { focus = air_ground_cooperation }
+		relative_position_id = east_wind_dragon
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {
+			add_ideas = { FRA_flying_artillery }
+		}
+	}
+#蒙德的未来
+	focus = {
+		id = Mondstadt_future
+		icon = goal_Knight
+		x = 35
+		y = 18
+		prerequisite = { focus = Red_wind_source focus = RAG_The_Gray_Wind_Rises }
+
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+	
+#如何同时打破这些木桩呢？
+	focus = {
+		id = Wood_pile_training
+		icon = goal_Knight
+		x = -10
+		y = 1
+		prerequisite = { focus = Mondstadt_future }
+		relative_position_id = Mondstadt_future
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#承诺不先使用艾琳
+	focus = {
+		id = Aileen
+		icon = goal_Knight
+		x = 0
+		y = 1
+		prerequisite = { focus = Wood_pile_training }
+		relative_position_id = Wood_pile_training
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#杜瓦林回归
+	focus = {
+		id = Dvalin_regression
+		icon = goal_Knight
+		x = 2
+		y = 1
+		prerequisite = { focus = Aileen }
+		relative_position_id = Aileen
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#召回北风狼
+	focus = {
+		id = recall_Andrius
+		icon = goal_Knight
+		x = -2
+		y = 1
+		prerequisite = { focus = Aileen }
+		relative_position_id = Aileen
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#金苹果群岛
+	focus = {
+		id = Golden_Apple_Islands
+		icon = goal_Knight
+		x = -4
+		y = 1
+		prerequisite = { focus = Mondstadt_future }
+		relative_position_id = Mondstadt_future
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#迷失的群岛
+	focus = {
+		id = Lost_Islands
+		icon = goal_Knight
+		x = -1
+		y = 1
+		prerequisite = { focus = Golden_Apple_Islands }
+		relative_position_id = Golden_Apple_Islands
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#指引的锚点
+	focus = {
+		id = Anchor_point_for_guidance
+		icon = goal_Knight
+		x = -1
+		y = 2
+		prerequisite = { focus = Lost_Islands }
+		relative_position_id = Golden_Apple_Islands
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#艾莉丝的遗产
+	focus = {
+		id = Alice's_legacy
+		icon = goal_Knight
+		x = -1
+		y = 3
+		prerequisite = { focus = Anchor_point_for_guidance }
+		relative_position_id = Golden_Apple_Islands
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#菲谢尔皇女夜谭
+	focus = {
+		id = Flowers_for_Princess_Fischl
+		icon = goal_Knight
+		x = 1
+		y = 1
+		prerequisite = { focus = Golden_Apple_Islands }
+		relative_position_id = Golden_Apple_Islands
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#圣国的咏唱
+	focus = {
+		id = Hymn_of_the_Holy_Land
+		icon = goal_Knight
+		x = 1
+		y = 2
+		prerequisite = { focus = Flowers_for_Princess_Fischl }
+		relative_position_id = Golden_Apple_Islands
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#幽夜净土
+	focus = {
+		id = Immernachtreich
+		icon = goal_Knight
+		x = 1
+		y = 4
+		prerequisite = { focus = Hymn_of_the_Holy_Land }
+		relative_position_id = Golden_Apple_Islands
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#无风之地
+	focus = {
+		id = The_land_without_wind
+		icon = goal_Knight
+		x = 4
+		y = 1
+		prerequisite = { focus = Mondstadt_future }
+		relative_position_id = Mondstadt_future
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#远征的风声
+	focus = {
+		id = The_wind_of_the_expedition
+		icon = goal_Knight
+		x = -1
+		y = 1
+		prerequisite = { focus = The_land_without_wind }
+		relative_position_id = The_land_without_wind
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#烬寂海上吹起蒲公英
+	focus = {
+		id = Mare_Jivar's_Dandelion
+		icon = goal_Knight
+		x = -1
+		y = 2
+		prerequisite = { focus = The_wind_of_the_expedition }
+		relative_position_id = The_land_without_wind
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#能量稳定的环境
+	focus = {
+		id = Energy_stable_environment
+		icon = goal_Knight
+		x = 2
+		y = 1
+		prerequisite = { focus = The_land_without_wind }
+		relative_position_id = The_land_without_wind
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#征服烬寂海
+	focus = {
+		id = Conquer_Mare_Jivar
+		icon = goal_Knight
+		x = 1
+		y = 4
+		prerequisite = { focus = Energy_stable_environment }
+		prerequisite = { focus = Mare_Jivar's_Dandelion }
+		relative_position_id = The_land_without_wind
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#开发炼金术
+	focus = {
+		id = Develop_alchemy
+		icon = goal_Knight
+		x = 10
+		y = 1
+		prerequisite = { focus = Mondstadt_future }
+		relative_position_id = Mondstadt_future
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#精密炼金
+	focus = {
+		id = Precision_alchemy
+		icon = goal_Knight
+		x = -1
+		y = 1
+		prerequisite = { focus = Develop_alchemy }
+		relative_position_id = Develop_alchemy
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#远古笔记
+	focus = {
+		id = Ancient_Notes
+		icon = goal_Knight
+		x = -1
+		y = 2
+		prerequisite = { focus = Precision_alchemy }
+		relative_position_id = Develop_alchemy
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#炼金术研究中心
+	focus = {
+		id = Alchemy_Research_Center
+		icon = goal_Knight
+		x = -1
+		y = 3
+		prerequisite = { focus = Ancient_Notes }
+		relative_position_id = Develop_alchemy
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#简易炼金
+	focus = {
+		id = Simple_alchemy
+		icon = goal_Knight
+		x = 1
+		y = 1
+		prerequisite = { focus = Develop_alchemy }
+		relative_position_id = Develop_alchemy
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#全民炼金
+	focus = {
+		id = Nationwide_alchemy
+		icon = goal_Knight
+		x = 1
+		y = 2
+		prerequisite = { focus = Simple_alchemy }
+		relative_position_id = Develop_alchemy
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#炼金术学校
+	focus = {
+		id = Alchemy_School
+		icon = goal_Knight
+		x = 1
+		y = 3
+		prerequisite = { focus = Nationwide_alchemy }
+		relative_position_id = Develop_alchemy
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#炼金术辉煌的时代
+	focus = {
+		id = Brilliant_alchemy
+		icon = goal_Knight
+		x = 0
+		y = 4
+		prerequisite = { focus = Alchemy_School }
+		prerequisite = { focus = Alchemy_Research_Center }
+		relative_position_id = Develop_alchemy
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#神圣自由蒙德
+	focus = {
+		id = Divine_freedom_Mondstadt
+		icon = goal_Knight
+		x = 0
+		y = 7
+		prerequisite = { focus = Brilliant_alchemy }
+		prerequisite = { focus = Conquer_Mare_Jivar }
+		prerequisite = { focus = Immernachtreich }
+		relative_position_id = Mondstadt_future
+		cost = 10
+		
+		cancel_if_invalid = yes    #条件不满足是否取消
+		continue_if_invalid = no   #条件不满足是否继续
+		available_if_capitulated = no    #投降后是否能继续
+		
+		completion_reward = {  }
+		}
+#军事-海军-空军
+#海风之鲸
+	focus = {
+		id = Sea_Wind_Whale
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 18
+		y = 1
+		cost = 10
+
+			trigger = {
+				not = { has_dlc = "La Resistance" }
+			}
+		
+		available_if_capitulated = yes
+		prerequisite = { focus = Mondstadt_future }
+		relative_position_id = Mondstadt_future
+		complete_tooltip = {
+			navy_experience = 25
+			every_state = {
+				limit = { has_state_flag = FRA_naval_rearmament_2NB }
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}		
+		}
+		completion_reward = {
+			navy_experience = 25
+			8 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = FRA_naval_rearmament_2NB
+				}
+			}
+			22 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = FRA_naval_rearmament_2NB
+				}
+			}
+		}
+	}
+#蒙德城侧面船坞
+	focus = {
+		id = Side_dock_of_Monde_City
+		icon = GFX_goal_generic_build_navy
+	 	prerequisite = { focus = Sea_Wind_Whale }
+		x = -3
+		y = 1
+		relative_position_id = Sea_Wind_Whale
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			1 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 1145
+						instant_build = yes
+					}
+					set_state_flag = FRA_colonial_naval_bases
+				}
+			}
+			1 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 4948
+						instant_build = yes
+					}
+					set_state_flag = FRA_colonial_naval_bases
+				}
+			}
+			1 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 5139
+						instant_build = yes
+					}
+					set_state_flag = FRA_colonial_naval_bases
+				}
+			}
+			1 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 4401
+						instant_build = yes
+					}
+					set_state_flag = FRA_colonial_naval_bases
+				}
+			}
+		}
+	}
+#鹰翔海滩海军基地
+	focus = {
+		id = Eagle_Flying_Beach_Naval_Base
+		icon = GFX_goal_generic_construct_naval_dockyard
+	 	prerequisite = { focus = Side_dock_of_Monde_City }
+		x = 0
+		y = 1
+		relative_position_id = Side_dock_of_Monde_City
+		cost = 10
+
+		available_if_capitulated = yes
+		completion_reward = {
+			12 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = FRA_colonial_dockyards
+				}
+			}
+			12 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = FRA_colonial_dockyards
+				}
+			}
+			12 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = FRA_colonial_dockyards
+				}
+			}
+		}
+	}
+#海风之鲸的学说
+	focus = {
+		id = The_theory_of_the_sea_breeze_whale
+		icon = GFX_goal_generic_construct_naval_dockyard
+	 	prerequisite = { focus = Eagle_Flying_Beach_Naval_Base }
+		x = 0
+		y = 1
+		relative_position_id = Eagle_Flying_Beach_Naval_Base
+		cost = 10
+
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+#大鲸传统
+	focus = {
+		id = Whale_tradition
+		icon = GFX_focus_generic_navy_battleship2
+	 	prerequisite = { focus = Sea_Wind_Whale }
+	 	mutually_exclusive = { focus = Alchemical_school }
+		x = 0
+		y = 1
+		relative_position_id = Sea_Wind_Whale
+		cost = 10
+
+		available_if_capitulated = yes
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+#仿造北斗号
+	focus = {
+		id = Imitation_of_Beidou
+		icon = GFX_goal_generic_navy_battleship
+	 	mutually_exclusive = { focus = Monde_on_the_Sea }
+	 	prerequisite = { focus = Whale_tradition }
+		x = -1
+		y = 1
+		relative_position_id = Whale_tradition
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_capital_ship_focus
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+	}
+#海上蒙德城
+	focus = {
+		id = Monde_on_the_Sea
+		icon = GFX_goal_generic_navy_carrier
+	 	mutually_exclusive = { focus = Imitation_of_Beidou }
+	 	prerequisite = { focus = Whale_tradition }
+		x = 1
+		y = 1
+		relative_position_id = Whale_tradition
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_carrier_focus
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+#海上风之翼
+	focus = {
+		id = Wings_of_the_Sea_Wind
+		icon = GFX_goal_generic_air_fighter
+
+	 	prerequisite = { focus = Monde_on_the_Sea }
+		x = -1
+		y = 1
+		relative_position_id = Monde_on_the_Sea
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_carrier_focus
+				bonus = 1.0
+				uses = 2
+				category = naval_air
+			}
+		}
+	}
+#优先建造鹰翔号
+	focus = {
+		id = Priority_construction_Eagle_Flying_ship
+		icon = GFX_focus_generic_cruiser2
+
+	 	prerequisite = { focus = Imitation_of_Beidou }
+		x = 0
+		y = 2
+		relative_position_id = Imitation_of_Beidou
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "FRA" 
+						version_name = "Richelieu Class"
+					}
+					requested_factories = 1
+					progress = 0.50
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "FRA" 
+						version_name = "Richelieu Class"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+			}
+			else = {
+				add_equipment_production = {
+					equipment = {
+						type = battleship_2
+						creator = "FRA" 
+					}
+					requested_factories = 1
+					progress = 0.50
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = battleship_2
+						creator = "FRA" 
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+			}
+		}
+	}
+#优先建造蒙德城号
+	focus = {
+		id = Priority_construction_Monde_ship
+		icon = GFX_goal_generic_navy_carrier
+
+	 	prerequisite = { focus = Monde_on_the_Sea }
+		x = 0
+		y = 2
+		relative_position_id = Monde_on_the_Sea
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				custom_effect_tooltip = FRA_prioritize_the_joffre_tt
+				hidden_effect = {
+					create_equipment_variant = {
+						name = "Joffre Class"
+						type = ship_hull_carrier_1
+						name_group = FRA_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_1
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_2
+							fixed_ship_secondaries_slot = dp_ship_secondaries_2
+							front_1_custom_slot = empty
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_1
+							creator = "FRA" 
+							version_name = "Joffre Class"
+						}
+						requested_factories = 1
+						progress = 0.40
+						amount = 1
+					}
+				}	
+			}
+			else = {
+				add_equipment_production = {
+					equipment = {
+						type = carrier_2
+						creator = "FRA" 
+					}
+					requested_factories = 1
+					progress = 0.40
+					amount = 1
+				}
+			}
+		}
+	}
+#炼金学派
+	focus = {
+		id = Alchemical_school
+		icon = GFX_goal_generic_navy_cruiser
+	 	prerequisite = { focus = Sea_Wind_Whale }
+	 	mutually_exclusive = { focus = Whale_tradition }
+		x = 4
+		y = 1
+		relative_position_id = Sea_Wind_Whale
+		cost = 10
+
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = FRA_the_young_school
+		}
+	}
+#水下战斗
+	focus = {
+		id = undersea_combat
+		icon = GFX_goal_generic_navy_submarine
+	 	prerequisite = { focus = Alchemical_school }
+		x = -1
+		y = 1
+		relative_position_id = Alchemical_school
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = FRA_undersea_combat
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+#水面作战
+	focus = {
+		id = surface_combat
+		icon = GFX_focus_generic_destroyer
+	 	prerequisite = { focus = Alchemical_school }
+		x = 1
+		y = 1
+		relative_position_id = Alchemical_school
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = FRA_surface_combat
+				bonus = 2.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+#加快改进
+	focus = {
+		id = Accelerate_improvement
+		icon = GFX_goal_generic_navy_cruiser
+	 	prerequisite = { focus = surface_combat }
+	 	prerequisite = { focus = undersea_combat }
+		x = 0
+		y = 2
+		relative_position_id = surface_combat
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = FRA_improved_screen_ships
+				bonus = 2.0
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+
+	
+#海上骑士团
+	focus = {
+		id = Knights_of_the_Sea
+		icon = GFX_goal_generic_navy_doctrines_tactics
+	 	prerequisite = { 
+	 		focus = Accelerate_improvement
+	 		focus = Priority_construction_Monde_ship
+	 		focus = Priority_construction_Eagle_Flying_ship
+	 	}
+		x = 3
+		y = 1
+		relative_position_id = Priority_construction_Eagle_Flying_ship
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			add_doctrine_cost_reduction = {
+				name = FRA_naval_doctrine
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	
+#西风之鹰
+	focus = {
+		id = West_Wind_Eagle
+		icon = GFX_goal_generic_build_airforce
+		x = 28
+		y = 1
+		cost = 10
+			trigger = {
+				not = { has_dlc = "La Resistance" }
+			}
+
+		available_if_capitulated = yes
+		prerequisite = { focus = Mondstadt_future }
+		relative_position_id = Mondstadt_future
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = air_focus_bypass_tt
+				NOT = {
+					any_owned_state = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			air_experience = 25
+			every_state = {
+				limit = { has_state_flag = FRA_air_focus_2air }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = FRA_air_focus_2air
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = FRA_air_focus_2air
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = FRA_air_focus_2air
+			}
+		}
+	}
+#重视凤翼
+	focus = {
+		id = Attach_importance_to_Wind_Glider
+		icon = GFX_goal_generic_air_fighter
+		mutually_exclusive = { focus = Attach_importance_to_explosives }
+	 	prerequisite = { focus = West_Wind_Eagle }
+		x = -1
+		y = 1
+		relative_position_id = West_Wind_Eagle
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_fighter_focus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+#重视重型风之翼
+	focus = {
+		id = Attach_importance_to_big_Wind_Glider
+		icon = GFX_goal_generic_air_fighter2
+	 	prerequisite = { focus = Attach_importance_to_Wind_Glider }
+		x = -1
+		y = 1
+		relative_position_id = Attach_importance_to_Wind_Glider
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_heavy_fighter_focus
+				bonus = 1.0
+				uses = 2
+				category = cat_heavy_fighter
+			}
+		}
+	}
+#重视炸药
+	focus = {
+		id = Attach_importance_to_explosives
+		icon = GFX_goal_generic_air_bomber
+		mutually_exclusive = { focus = importance_Wind_Glider }
+	 	prerequisite = { focus = West_Wind_Eagle }
+		x = 1
+		y = 1
+		relative_position_id = West_Wind_Eagle
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_bomber_focus
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+#鹰的学说
+	focus = {
+		id = Eagle_theory
+		icon = GFX_goal_generic_air_doctrine
+	 	prerequisite = { focus = Attach_importance_to_explosives  focus = Attach_importance_to_Wind_Glider 	}
+		x = 1
+		y = 1
+		relative_position_id = Attach_importance_to_Wind_Glider
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 50
+
+			add_doctrine_cost_reduction = {
+				name = FRA_air_doctrine
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+#重视兔兔伯爵
+	focus = {
+		id = Attach_importance_to_eBaron_Bunny
+		icon = GFX_goal_generic_occupy_start_war
+	 	prerequisite = { focus = Attach_importance_to_explosives }
+		x = 1
+		y = 1
+		relative_position_id = Attach_importance_to_explosives
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_heavy_bomber_focus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+			}
+		}
+	}
+#重视蹦蹦炸弹
+	focus = {
+		id = Attach_importance_to_eJumpy_Dumpty
+		icon = GFX_goal_generic_air_naval_bomber
+	 	prerequisite = { focus = Attach_importance_to_explosives }
+		x = 3
+		y = 1
+		relative_position_id = Attach_importance_to_explosives
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_naval_bomber_focus
+				bonus = 1.0
+				uses = 2
+				category = naval_bomber
+			}
+		}
+	}
+#飞鸟与风之翼
+	focus = {
+		id = Birds_and_Wind_Glider
+		icon = GFX_goal_generic_air_doctrine
+	 	prerequisite = { focus = Eagle_theory }
+		x = 1
+		y = 2
+		relative_position_id = Attach_importance_to_Wind_Glider
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+}

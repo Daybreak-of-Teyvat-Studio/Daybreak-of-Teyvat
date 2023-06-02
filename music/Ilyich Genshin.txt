@@ -1,0 +1,587 @@
+music_station = "base_music"
+
+music = {
+	song = "A Glorious Awakening 眠龙醒心"
+	chance= { modifier= { factor= 4 } } ###A Glorious Awakening 眠龙醒心.ogg"
+	
+}
+music = {
+	song = "A Memorable Fancy 温情的遥忆"
+	chance= { modifier= { factor= 4 } } ###A Memorable Fancy 温情的遥忆.ogg"
+	
+}
+music = {
+	song = "Bane of Ambitions 薙除杂妄"
+	chance= { modifier= { factor= 4 } } ###Bane of Ambitions 薙除杂妄.ogg"
+	
+}
+music = {
+	song = "Bard's Adventure 诗人的工作"
+	chance= { modifier= { factor= 4 } } ###Bard's Adventure 诗人的工作.ogg"
+	
+}
+music = {
+	song = "Clear Sky Over Liyue 璃月的晴空"
+	chance= { modifier= { factor= 4 } } ###Clear Sky Over Liyue 璃月的晴空.ogg"
+	
+}
+music = {
+	song = "Combat Beneath the Waves 寒光裂涛"
+	chance= { modifier= { factor= 4 } } ###Combat Beneath the Waves 寒光裂涛.ogg"
+	
+}
+music = {
+	song = "Contemplation in Snow 白皑中的冥想n"
+	chance= { modifier= { factor= 4 } } ###Contemplation in Snow 白皑中的冥想.ogg"
+	
+}
+music = {
+	song = "Dance of Aphros 浪沫起舞"
+	chance= { modifier= { factor= 4 } } ###Dance of Aphros 浪沫起舞.ogg"
+	
+}
+
+
+music = {
+	song = "Duel in the Mist 斩雾破竹"
+	chance= { modifier= { factor= 4 } } ###Duel in the Mist 斩雾破竹.ogg"
+	
+}
+music = {
+	song = "Fragile Fantasy 银白的希望"
+	chance= { modifier= { factor= 4 } } ###Fragile Fantasy 银白的希望.ogg"
+	
+}
+music = {
+	song = "Genshin Impact Main Theme 原神"
+	chance= { modifier= { factor= 4 } } ###Genshin Impact Main Theme 原神.ogg"
+	
+}
+music = {
+	song = "Good Night, Liyue 晚安，璃月"
+	chance= { modifier= { factor= 4 } } ###Good Night, Liyue 晚安，璃月.ogg"
+	
+}
+music = {
+	song = "Hakushin's Lullaby 神狐的祝福"
+	chance= { modifier= { factor= 4 } } ###Hakushin's Lullaby 神狐的祝福.ogg"
+	
+}
+music = {
+	song = "Hanachirusato 华散之缘"
+	chance= { modifier= { factor= 4 } } ###Hanachirusato 华散之缘.ogg"
+	
+}
+
+
+music = {
+	song = "Hope or Nostalgia 祈望与乡魂"
+	chance= { modifier= { factor= 4 } } ###Hope or Nostalgia 祈望与乡魂.ogg"
+	
+}
+music = {
+	song = "Illuminated Coral Palace 溢彩华庭"
+	chance= { modifier= { factor= 4 } } ###Illuminated Coral Palace 溢彩华庭.ogg"
+	
+}
+music = {
+	song = "Inazuma 稻妻"
+	chance= { modifier= { factor= 4 } } ###Inazuma 稻妻.ogg"
+	
+}
+music = {
+	song = "Island of Crystal and Pearl 海祇之岛"
+	chance= { modifier= { factor= 4 } } ###Island of Crystal and Pearl 海祇之岛.ogg"
+	
+}
+music = {
+	song = "Kitsune's Mask 悠远的关怀"
+	chance= { modifier= { factor= 4 } } ###Kitsune's Mask 悠远的关怀.ogg"
+	
+}
+music = {
+	song = "Letter From Ajax 埃阿斯的回信"
+	chance= { modifier= { factor= 4 } } ###Letter From Ajax 埃阿斯的回信.ogg"
+	
+}
+
+
+music = {
+	song = "Liyue 璃月"
+	chance= { modifier= { factor= 4 } } ###Liyue 璃月.ogg"
+	
+}
+music = {
+	song = "Maiden's Longing 环佩凭栏望千帆"
+	chance= { modifier= { factor= 4 } } ###Maiden's Longing 环佩凭栏望千帆.ogg"
+	
+}
+music = {
+	song = "Moon in One's Cup 杯中明月"
+	chance= { modifier= { factor= 4 } } ###Moon in One's Cup 杯中明月.ogg"
+	
+}
+music = {
+	song = "Moonlike Smile 皎洁的笑颜"
+	chance= { modifier= { factor= 4 } } ###Moonlike Smile 皎洁的笑颜.ogg"
+	
+}
+music = {
+	song = "Nimble as Lightning 霆霓快雨"
+	chance= { modifier= { factor= 4 } } ###Nimble as Lightning 霆霓快雨.ogg"
+	
+}
+music = {
+	song = "Ode to Azhdaha 天遒歌"
+	chance= { modifier= { factor= 4 } } ###Ode to Azhdaha 天遒歌.ogg"
+	
+}
+
+
+music = {
+	song = "Path of Yaksha 捷疾之业"
+	chance= { modifier= { factor= 4 } } ###Path of Yaksha 捷疾之业.ogg"
+	
+}
+music = {
+	song = "Peaceful Wishes 和平的祝愿"
+	chance= { modifier= { factor= 4 } } ###Peaceful Wishes 和平的祝愿.ogg"
+	
+}
+music = {
+	song = "Qilin's Prance 麟跃幽岩"
+	chance= { modifier= { factor= 4 } } ###Qilin's Prance 麟跃幽岩.ogg"
+	
+}
+music = {
+	song = "Pure Sky 青空"
+	chance= { modifier= { factor= 4 } } ###Pure Sky 青空.ogg"
+	
+}
+music = {
+	song = "Rapid as Wildfires 疾如猛火"
+	chance= { modifier= { factor= 4 } } ###Rapid as Wildfires 疾如猛火.ogg"
+	
+}
+music = {
+	song = "Rex Incognito 尘世闲游"
+	chance= { modifier= { factor= 4 } } ###Rex Incognito 尘世闲游.ogg"
+	
+}
+
+
+music = {
+	song = "Shirasagi Princess 风仪之舞"
+	chance= { modifier= { factor= 4 } } ###Shirasagi Princess 风仪之舞.ogg"
+	
+}
+music = {
+	song = "Termination of Desires 何妄何执"
+	chance= { modifier= { factor= 4 } } ###Termination of Desires 何妄何执.ogg"
+	
+}
+music = {
+	song = "The Almighty Violet Thunder 稻光神鸣"
+	chance= { modifier= { factor= 4 } } ###The Almighty Violet Thunder 稻光神鸣.ogg"
+	
+}
+music = {
+	song = "Through the Eyes of a Dragon 创龙点睛"
+	chance= { modifier= { factor= 4 } } ###Through the Eyes of a Dragon 创龙点睛.ogg"
+	
+}
+music = {
+	song = "Thunderings of the Merciless 雷霆的威光"
+	chance= { modifier= { factor= 4 } } ###Thunderings of the Merciless 雷霆的威光.ogg"
+	
+}
+music = {
+	song = "Undersea Encounters 鲸波鼍浪"
+	chance= { modifier= { factor= 4 } } ###Undersea Encounters 鲸波鼍浪.ogg"
+	
+}
+
+
+music = {
+	song = "Will of Thunder 轰雷的意志"
+	chance= { modifier= { factor= 4 } } ###Will of Thunder 轰雷的意志.ogg"
+	
+}
+music = {
+	song = "华灯星聚 Myriad of Lights"
+	chance= { modifier= { factor= 4 } } ###华灯星聚 Myriad of Lights.ogg"
+	
+}
+music = {
+	song = "神女劈观·唤情 Devastation and Redemption"
+	chance= { modifier= { factor= 4 } } ###神女劈观·唤情 Devastation and Redemption.ogg"
+	
+}
+
+
+music = {
+ song = "Blossoms of Summer Night 硝华流焰"	
+ chance= { modifier= { factor= 4 } }
+
+}
+music = {
+ song = "Chrysalis Suspirii 哀息之茧"	
+ chance= { modifier= { factor= 4 } }
+
+}
+music = {
+ song = "Dawn Winery Theme 晨曦酒庄"	
+ chance= { modifier= { factor= 4 } }
+
+}
+
+
+
+music = {
+ song = "Rage Beneath the Mountains 岩壑之崩"	
+ chance= { modifier= { factor= 4 } }
+
+}
+music = {
+ song = "Ruu's Melody 阿瑠的歌"	
+ chance= { modifier= { factor= 4 } }
+
+}
+music = {
+ song = "Saltatio Favillae 燃烬之舞"	
+ chance= { modifier= { factor= 4 } }
+
+}
+
+
+
+music = {
+	song = "Lithic Oath 万壑千岩"
+	chance= { modifier= { factor= 4 } } ####Lithic Oath 万壑千岩.ogg"
+	
+}
+
+music = {
+	song = "Tale of the Yakshas 夜叉的回叙"
+	chance= { modifier= { factor= 4 } } ####Tale of the Yakshas 夜叉的回叙.ogg"
+	
+}
+
+music = {
+	song = "Wandering Clouds 野云万里"
+	chance= { modifier= { factor= 4 } } ####Wandering Clouds 野云万里.ogg"
+	
+}
+
+
+
+
+music = {
+	song = "For Riddles, for Wonders 几初的智愿"
+	chance= { modifier= { factor= 4 } } 
+}
+music = {
+	song = "Hustle and Bustle of Ormos 喧繁之港"
+	chance= { modifier= { factor= 4 } } 
+}
+music = {
+	song = "Overnight Dew in the Woods 香林繁露之夜"
+	chance= { modifier= { factor= 4 } } 
+}
+music = {
+	song = "Scorching Outpost 郁灼的前哨"
+	chance= { modifier= { factor= 4 } } 
+}
+music = {
+	song = "Sumeru 须弥"
+	chance= { modifier= { factor= 4 } } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# PEACE SONGS ##################
+music = {
+	song = "general_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "general_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "general_peace_3"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}
+}
+
+music = {
+	song = "allies_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = democratic
+		}		
+	}	
+}
+
+music = {
+	song = "allies_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = democratic
+		}		
+	}	
+}
+
+music = {
+	song = "axis_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "axis_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = fascism
+		}		
+	}	
+}
+
+# WAR SONGS ####################
+
+music = {
+	song = "general_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "general_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "axis_war_4"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = fascism
+		}		
+	}	
+}
+
+music = {
+	song = "allies_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = democratic
+		}		
+	}	
+}
+
+music = {
+	song = "allies_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = democratic
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_peace_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+			has_government = communism
+		}		
+	}	
+}
+
+
+music = {
+	song = "comintern_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "comintern_war_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = communism
+		}		
+	}	
+}
+
+
+

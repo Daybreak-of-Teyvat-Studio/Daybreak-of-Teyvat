@@ -1,0 +1,1030 @@
+ideas = {
+country = {
+	#清泉枯竭
+	MOT_WAR_ANTI_SPI = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			
+		}
+		targeted_modifier  = {
+			tag = SPI
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0
+		}
+	}
+	#奔狼失声
+	MOT_WAR_ANTI_AND = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			
+		}
+		targeted_modifier  = {
+			tag = AND
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0
+		}
+	}
+	#晨曦消退
+	MOT_WAR_ANTI_RAG = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			
+		}
+		targeted_modifier  = {
+			tag = RAG
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	#西风止息
+	MOT_WAR_ANTI_FAV = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			
+		}
+		targeted_modifier  = {
+			tag = FAV
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	#风龙坠地
+	MOT_WAR_ANTI_DVA = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			
+		}
+		targeted_modifier  = {
+			tag = DVA
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0
+		}
+	}
+	#收复后方
+	MOT_WAR_ANTI_GUN = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			
+		}
+		targeted_modifier  = {
+			tag = GUN
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0
+		}
+	}
+	#为自由而战
+	MOT_WAR_ANTI_LAW1 = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			consumer_goods_factor = -0.1
+			war_support_factor = 0.2
+			industrial_capacity_factory = 0.25
+		}
+		targeted_modifier  = {
+			tag = LAW
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0
+		}
+	}
+	#为稳定而战
+	MOT_WAR_ANTI_LAW2 = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			supply_consumption_factor = -0.2
+			stability_factor = 0.2
+			command_Power_gain = 0.25
+		}
+		targeted_modifier  = {
+			tag = LAW
+			attack_bonus_against = 0
+			defense_bonus_against = 0.1
+		}
+	}
+	#为民主而战
+	MOT_WAR_ANTI_LAW3 = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			supply_factor = 0.25
+			breakthrough_factor = 0.1
+			army_core_attack_factor = 0.05
+			army_core_defense_factor = 0.05
+		}
+		targeted_modifier  = {
+			tag = LAW
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	#为蒙德而战
+	MOT_WAR_ANTI_LAW4 = {
+		picture = GFX_idea_MEX_revolutionary_army
+		removal_cost = -1
+		modifier = {
+			army_core_attack_factor = 0.05
+			army_core_defense_factor = 0.05
+		}
+		targeted_modifier  = {
+			tag = LAW
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	#制胜于生产线
+	MOT_Win_on_Pro_Line = {
+		picture = GFX_idea_generic_production_bonus
+		removal_cost = -1
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.2
+			production_factory_start_efficiency_factor = 0.1
+			production_factory_max_efficiency_factor = 0.05
+		}
+	}
+	#为蒙德寻求胜利之路
+	MOT_Seek_Way_for_Mond = {
+		picture = ast_all_in
+		removal_cost = -1
+		modifier = {
+			production_lack_of_resource_penalty_factor = -0.5
+			production_factory_efficiency_gain_factor = 0.2
+		}
+	}
+	#重视运输
+	MOT_Focus_on_Infra = {
+		picture = GFX_idea_generic_supply_lines
+		removal_cost = -1
+		modifier = {
+			production_speed_infrastructure_factor = 0.25
+			production_speed_rail_way_factor = 0.25
+			production_speed_supply_node_factor = 0.5
+		}
+	}
+	#内战之火
+	MOT_Fire_of_Civil_War = {
+		picture = GFX_idea_SPA_recovering_from_the_civil_war
+		removal_cost = -1
+		modifier = {
+			enemy_declare_war_tension = 0.5
+			generate_wargoal_tension = 0.5
+			enemy_justify_war_goal_time = 4
+			justify_war_goal_time = 2
+			trade_opinion_factor = -0.5
+			monthly_population = -1
+			defensive_war_stability_factor = 0.2
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+		}
+	}
+		MOT_fight_for_freedom = {
+
+			picture = GFX_idea_generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+			}
+		}
+		MOT_seek_meaning = {
+
+			picture = GFX_idea_generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 1.0
+				experience_gain_army_unit_factor = 1.0
+				experience_gain_factor = 1.0
+			}
+		}
+		MOT_seek_existence = {
+
+			picture = GFX_idea_generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_regain = 0.50
+			}
+		}
+		MOT_seek_unity = {
+
+			picture = soviet_german_friendship
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 1.00
+				army_org = 10.0
+			}
+		}
+		MOT_seek_advancement = {
+
+			picture = soviet_german_friendship
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+				land_doctrine_cost_factor = -0.3
+			}
+		}
+		MOT_seek_peace = {
+
+			picture = soviet_german_friendship
+
+			removal_cost = -1
+
+			modifier = {
+			
+			}
+			equipment_bonus = {
+				category_army = {
+					soft_attack = 0.2
+				}
+			}
+		}
+	#愚人众的暴行
+	MOT_Betrayal_of_Fool = {
+		picture = GFX_idea_eng_tackle_capitalism
+		removal_cost = -1
+		modifier = {
+			supply_consumption_factor = 0.5
+			army_attack_factor = -0.2
+			stability_factor = -0.1
+			war_support_factor = -0.1
+		}
+	}
+	#雇佣兵的暴行
+	MOT_Betrayal_of_Amry = {
+		picture = spr_crush_the_revolution
+		removal_cost = -1
+		modifier = {
+			army_morale_factor = -0.2
+			army_attack_speed_factor = -0.5
+			army_speed_factor = -0.5
+			stability_factor = -0.1
+			war_support_factor = -0.1
+		}
+	}
+	#乡绅的背叛
+	MOT_Betrayal_of_Lords = {
+		picture = spr_crush_the_revolution
+		removal_cost = -1
+		modifier = {
+			attrition = 1
+			experience_loss_factor = 0.5
+			equipment_bonus = {
+				category_army = {
+					casualty_trickleback = -0.5
+				}
+			}
+		}
+	}
+	#商人的背叛
+	MOT_Betrayal_of_Traders = {
+		picture = GFX_idea_eng_tackle_capitalism
+		removal_cost = -1
+		modifier = {
+			supply_factor = -0.5
+			out_of_supply_factor = 1
+			army_morale_factor = -0.2
+			stability_factor = -0.1
+			war_support_factor = -0.1
+		}
+	}
+	#人民的支持
+	MOT_Support_From_P = {
+		picture = GFX_idea_SPR_the_popular_front
+		removal_cost = -1
+		modifier = {
+			supply_consumption_factor = -0.2
+			supply_factor = 0.25
+			army_morale_factor = 0.2
+		}
+	}
+	#全军进攻
+	MOT_Temp_Attack_Order = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			army_attack_factor = 0.1
+			command_abilities_cost_factor = -0.5
+			org_loss_when_moving = -0.25
+			max_planning = 0.2
+			planning_speed = 0.25
+			equipment_bonus = {
+				breakthrough = 0.1
+			}
+		}
+	}
+	#稳固阵线
+	MOT_Temp_Defense_Order = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			army_defence_factor = 0.15
+			command_abilities_cost_factor = -0.5
+			army_org_factor = 0.1
+			dig_in_speed = 1
+			max_dig_in = 10
+		}
+	}
+	#迟滞敌军
+	MOT_Temp_Back_Order = {
+		picture = GFX_idea_generic_war_preparation
+		removal_cost = -1
+		modifier = {
+			army_defence_factor = 0.15
+			command_abilities_cost_factor = -0.5
+			army_org_regain = 0.25
+			org_loss_at_low_org_factor = -0.5
+			army_morale_factor = 0.15
+		}
+	}
+	#战争中学习战争
+	MOT_Learn_War_in_War = {
+		picture = GFX_idea_chi_wargaming_division
+		removal_cost = -1
+		modifier = {
+			land_doctrine_cost_factor = -0.1
+			experience_gain_army_factor = 1
+			experience_gain_army_unit_factor = 0.5
+			experience_gain_factor = 1
+		}
+	}
+	#骑士团Debuff
+	#发生什么事了
+	MOT_What_Happened = {
+		picture = unknown
+		removal_cost = -1
+		modifier = {
+			political_power_gain = 1
+		}
+	}
+	#风魔龙作乱
+	MOT_Attack_of_Twalin = {
+		picture = strategic_bombing_focus
+		removal_cost = -1
+		modifier = {
+			stability_weekly = -0.005
+			political_power_gain = -0.25
+			command_Power_gain = -0.1
+		}
+	}
+	#食品供应断绝 清泉镇
+	MOT_Debuff_Food_Shortage = {
+		picture = SOV_the_shadow_of_the_great_famine
+		removal_cost = -1
+		modifier = {
+			monthly_population = -0.5
+			conscription = -0.005
+			stability_weekly = -0.005
+		}
+	}
+	#科研人员不足 龙脊雪山领
+	MOT_Debuff_Tech_Shortage = {
+		picture = GFX_idea_DOT_Government_Research1
+		removal_cost = -1
+		modifier = {
+			research_speed_factor = -0.2
+		}
+	}
+	#后备人力短缺 古恩希尔德
+	MOT_Debuff_Man_Shortage = {
+		picture = tfv_can_conscription_crisis
+		removal_cost = -1
+		modifier = {
+			conscription_factor = -0.25
+			training_time_factor = 0.25
+			minimum_training_level = 0.2
+		}
+	}
+	#生产原料停运 劳伦斯
+	MOT_Debuff_Resour_Shortage = {
+		picture = ast_all_in
+		removal_cost = -1
+		modifier = {
+			state_resources_factor = -0.25
+			production_speed_buildings_factor = -0.20
+			industrial_capacity_factory = -0.2
+		}
+	}
+	#商品生产缺乏 莱艮芬德
+	MOT_Debuff_Goods_Shortage = {
+		picture = generic_goods_red_bonus
+		removal_cost = -1
+		modifier = {
+			consumer_goods = 0.1
+		}
+	}
+	#舆论环境混乱 西风教会
+	MOT_Debuff_Prop_Shortage = {
+		picture = EST_democratic_opposition
+		removal_cost = -1
+		modifier = {
+			stability_factor = -0.1
+			war_support_factor = -0.1
+			army_core_attack_factor = -0.05
+			army_core_defence_factor = -0.05
+		}
+	}
+}
+    tank_manufacturer = { 
+
+        designer = yes
+		#星落湖列车加工（需控制或击败劳伦斯领）
+		MOT_TrainsFac_of_StarFallen = {
+			name = MOT_TrainsFac_of_StarFallen
+			cost = 100
+			picture = bul_pirin
+			available = {
+				original_tag = MOT
+			}
+			allowed = {
+				original_tag = MOT
+			}
+			visible = {
+				original_tag = MOT
+			}
+			traits = {
+				
+			}
+			modifier = {
+				railway_gun_bombardment_factor = 1
+			}
+			research_bonus = {
+				train_tech = 1
+			}
+			equipment_bonus = {
+			     train_tech = {
+					build_cost_ic = -0.25
+				}
+			}
+			ai_will_do = {
+				factor = 3
+			}
+			
+		}
+
+		#鹰之城装甲工厂（需控制或击败劳伦斯领）
+		MOT_TankFac_of_Eagle = {
+			name = MOT_TankFac_of_Eagle
+			cost = 100
+			picture = tur_golcuk_naval_base
+			available = {
+				28 = {
+					owner = {
+						OR = {
+							original_tag = FROM
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+					}
+				}
+			}
+			allowed = {
+				Is_MOT = yes
+			}
+			visible = {
+				Is_MOT = yes
+			}
+			traits = {
+				medium_tank_manufacturer
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				armor = 0.2
+			}
+			equipment_bonus = {
+			     armor = {
+					reliablity = 0.05
+					breakthrough = 0.1
+					build_cost_ic = -0.05
+				}
+			}
+			ai_will_do = {
+				factor = 3
+			}
+			
+		}
+	}
+	
+	
+	naval_manufacturer = {
+	
+		designer = yes
+		
+		#鹰翔船厂（初始可用）
+		MOT_Dock_of_EegleFlying = {
+			name = MOT_Dock_of_EegleFlying
+			cost = 100
+			picture = generic_naval_manufacturer_1
+			available = {
+				12 = {
+					owner = {
+						OR = {
+							original_tag = FROM
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+					}
+				}
+			}
+			allowed = {
+				Is_MOT = yes
+			}
+			visible = {
+				Is_MOT = yes
+			}
+			traits = {
+				convoy_escort_naval_manufacturer
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				naval_equipment = 0.2
+			}
+			equipment_bonus = {
+			    screen_ship = {
+					build_cost_ic = -0.1
+					max_strength = 0.15
+					hg_attack = 0.15
+					torpedo_attack = 0.15
+				}
+			}
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+		#星落船坞（需控制古恩希尔德领）
+		MOT_Dock_of_StarFall = {
+			name = MOT_Dock_of_StarFall
+			cost = 100
+			picture = maizuru_naval_arsenal
+			available = {
+				9 = {
+					owner = {
+						OR = {
+							original_tag = FROM
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+					}
+				}
+			}
+			allowed = {
+				Is_MOT = yes
+			}
+			visible = {
+				Is_MOT = yes
+			}
+			traits = {
+				battlefleet_designer
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				naval_equipment = 0.2
+			}
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.2
+					hg_attack = 0.15
+					torpedo_attack = 0.15
+				}
+			}
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+	}
+	
+	
+	aircraft_manufacturer = {
+		
+		designer = yes
+		
+		#西风教会（需控制或击败西风教会领）
+		MOT_Church_of_West = {
+			name = MOT_Church_of_West
+			cost = 100
+			picture = GFX_idea_fra_sncac
+			available = {
+				23 = {
+					owner = {
+						OR = {
+							original_tag = FROM
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+					}
+				}
+			}
+			allowed = {
+				Is_MOT = yes
+			}
+			visible = {
+				Is_MOT = yes
+			}
+			traits = {
+				light_aircraft_manufacturer
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				air_equipment = 0.2
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+				    air_agility_factor = 0.05
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_airframe = {
+				    air_agility_factor = 0.05
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+				small_plane_cas_airframe = {
+				    air_agility_factor = 0.05
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_cas_airframe = {
+				    air_agility_factor = 0.05
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+				small_plane_naval_bomber_airframe = {
+				    air_agility_factor = 0.05
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_naval_bomber_airframe = {
+				    air_agility_factor = 0.05
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+			}
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		#风龙航空（需控制或击败风龙领）
+		MOT_Dragon_Air = {
+			name = MOT_Dragon_Air
+			cost = 100
+			picture = GFX_idea_fra_sncaso
+			available = {
+				57 = {
+					owner = {
+						OR = {
+							original_tag = FROM
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+					}
+				}
+			}
+			allowed = {
+				Is_MOT = yes
+			}
+			visible = {
+				Is_MOT = yes
+			}
+			traits = {
+				medium_aircraft_manufacturer
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				air_equipment = 0.2
+			}
+			equipment_bonus = {
+				medium_plane_airframe = {
+				    maximum_speed = 0.1
+					reliability = 0.1
+					build_cost_ic = -0.1
+				}
+				medium_plane_fighter_airframe = {
+				    maximum_speed = 0.1
+					reliability = 0.1
+					build_cost_ic = -0.1
+				}
+				medium_plane_scout_plane_airframe = {
+				    maximum_speed = 0.1
+					reliability = 0.1
+					build_cost_ic = -0.1	
+				}
+			}
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+	}
+	
+	materiel_manufacturer = {
+
+		designer = yes
+		
+		#西风骑士军工（初始可用）
+		MOT_Knights_Infan = {
+			name = MOT_Knights_Infan
+			cost = 100
+			picture = generic_motorized_equipment_manufacturer_2
+			allowed = {
+				original_tag = MOT
+			}
+			visible = {
+				original_tag = MOT
+			}
+			traits = {
+				infantry_equipment_manufacturer
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				infantry_weapons = 0.2
+			}
+			equipment_bonus = {
+			    infantry_equipment = {
+					build_cost_ic = -0.15
+					soft_attack = 0.1
+				}
+			}
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+		#蒙德魔导工坊（初始可用）
+		MOT_Magicians_Facto = {
+			name = MOT_Magicians_Facto
+			cost = 100
+			picture = generic_artillery_manufacturer_3
+			allowed = {
+				original_tag = MOT
+			}
+			visible = {
+				original_tag = MOT
+			}
+			traits = {
+				artillery_manufacturer
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				artillery = 0.2
+			}
+			equipment_bonus = {
+			    artillery_equipment = {
+					build_cost_ic = -0.1
+					soft_attack = 0.15
+				}
+			}
+			ai_will_do = {
+				factor = 4
+			}
+		}
+		
+		
+		#冒险家协会（初始可用，获得定期人力）
+		MOT_Institution_of_Adven = {
+			name = MOT_Institution_of_Adven
+			cost = 100
+			picture = GER_MAN
+			allowed = {
+				original_tag = MOT
+			}
+			visible = {
+				original_tag = MOT
+			}
+			traits = {
+				
+			}
+			modifier = {
+				weekly_manpower = 1000
+				consumer_goods_factor = 0.05
+			}
+			research_bonus = {
+				artillery = 0.1
+				infantry_equipment = 0.1
+			}
+			equipment_bonus = {
+			}
+			ai_will_do = {
+				factor = 4
+			}
+		}
+		
+		
+		#MOT_Coo_of_Dawn 晨曦集团（需击败莱艮芬德领）
+		MOT_Coo_of_Dawn = {
+			name = MOT_Coo_of_Dawn
+			cost = 200
+			picture = generic_artillery_manufacturer_1
+			available = {
+				47 = {
+					owner = {
+						OR = {
+							original_tag = FROM
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+					}
+				}
+			}
+			allowed = {
+				Is_MOT = yes
+			}
+			visible = {
+				Is_MOT = yes
+			}
+			traits = {
+				artillery_manufacturer
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+			research_bonus = {
+				infantry_equipment = 0.15
+				artillery = 0.15
+			}
+			equipment_bonus = {
+			    infantry_equipment = {
+					build_cost_ic = -0.1
+					soft_attack = 0.1
+				}
+			    artillery_equipment = {
+					build_cost_ic = -0.1
+					soft_attack = 0.15
+				}
+			}
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+		
+		
+	industrial_concern = {
+		
+		designer = yes
+		
+		#歌德建筑公司（初始可用）
+		MOT_Construct_Co = {
+			name = MOT_Construct_Co
+			cost = 100
+			picture = generic_industrial_concern_2
+			allowed = {
+				original_tag = MOT
+			}
+			visible = {
+				original_tag = MOT
+			}
+			traits = {
+				construction_company
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.25
+			}
+			research_bonus = {
+				industry = 0.2
+			}
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		#公立蒙德大学（初始可用）
+		MOT_University_of_Mond = {
+			name = MOT_University_of_Mond
+			cost = 100
+			picture = generic_electronics_concern_3
+			allowed = {
+				original_tag = MOT
+			}
+			visible = {
+				original_tag = MOT
+			}
+			traits = {
+				electronics_concern
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				electronics = 0.2
+			}
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		#清泉交易所（初始可用）
+		MOT_Northern_Bank = {
+			name = MOT_Northern_Bank
+			cost = 100
+			picture = generic_electronics_concern_1
+			available = {
+				36 = {
+					owner = {
+						OR = {
+							original_tag = FROM
+							is_puppet_of = FROM
+							is_subject_of = FROM
+						}
+					}
+				}
+			}
+			allowed = {
+				Is_MOT = yes
+			}
+			visible = {
+				Is_MOT = yes
+			}
+			traits = {
+				construction_company
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_gain = -0.2
+			}
+			research_bonus = {
+			}
+			ai_will_do = {
+				factor = 2
+			}
+		}
+		#魔女的茶话会（玩家可用）
+		MOT_Tea_Party_of_Witches = {
+			name = MOT_Tea_Party_of_Witches
+			cost = 150
+			picture = generic_artillery_manufacturer_3
+			available = {
+				NOT = {
+					is_ai = yes
+				}
+				threat > 0.2
+			}
+			allowed = {
+				Is_MOT = yes
+			}
+			visible = {
+				Is_MOT = yes
+			}
+			traits = {
+				industrial_concern
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				custom_modifier_tooltip  = MOT_TeaParty
+			}
+			on_add = {
+				owner = {
+					add_offsite_building = { type = arms_factory level = 2 }
+					add_offsite_building = { type = industrial_complex level = 2 }
+				}
+			}
+			on_remove = {
+				owner = {
+					remove_offsite_building = { type = arms_factory level = 2 }
+					remove_offsite_building = { type = industrial_complex level = 2 }
+				}
+			}
+			research_bonus = {
+				industry = 0.2
+			}
+			equipment_bonus = {
+			    
+			}
+			ai_will_do = {
+				factor = 4
+			}
+		}
+		
+		
+	}
+	
+}

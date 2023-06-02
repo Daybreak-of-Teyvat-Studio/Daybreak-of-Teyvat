@@ -1,0 +1,9 @@
+﻿division_template = {
+	name = "防卫者耕地机"
+	regiments = {
+		knightmare = { x = 0 y = 0 }
+		knightmare = { x = 1 y = 0 }
+		knightmare = { x = 2 y = 0 }
+		knightmare = { x = 1 y = 1 }
+	}
+}

@@ -1,0 +1,2187 @@
+focus_tree = {
+	id = LYY23
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LYYA
+		}
+	}
+	default = no
+	focus = {
+		id = Rock_with_Covenant_Harbor
+		icon = goal_Zhongli2  #GFX_goal_unknown#
+		cost = 7.00
+		ai_will_do = {
+			factor = 5
+		}
+		x = 13
+		y = 0
+		    
+			completion_reward = {   
+			custom_effect_tooltip = Spend_One_Million_Mora    
+			add_to_variable = { var = dx value = -1 }  
+					add_political_power = 160
+add_equipment_to_stockpile = { type = fighter_equipment_1  amount = 50 producer = MOT }
+add_equipment_to_stockpile = { type = infantry_equipment  amount = 1000  producer = LYY }
+add_equipment_to_stockpile = { type = motorized_equipment_1  amount = 500 producer = INA }
+add_equipment_to_stockpile = { type = train_equipment amount = 500 producer = SUM }
+add_equipment_to_stockpile = { type = transport_plane_equipment_1  amount = 500 producer = PRI }
+country_event = { id = Ilyich.1  days = 1  }
+country_event = { id = Ilyich_Weapon.1  days = 1  }
+					clr_country_flag = spend_money_flag
+					
+				}
+
+	}
+	focus = {
+		id = Reforming_Economy
+		icon = goal_Zhongli2
+		cost = 7.00
+		x = 18
+		y = 0
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Teyvat_Strategy
+		icon = goal_Zhongli2
+		cost = 7.00
+		x = 24
+		y = 0
+			completion_reward = {   
+			custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_research_slot = 1
+					add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+					}
+				}
+
+	}
+	focus = {
+		id = Liyue_Strategy
+		icon = goal_Zhongli2
+		cost = 7.00
+		x = 37
+		y = 0
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Please_Immortal_Ceremony
+		icon = goal_Zhongli2
+		cost = 7.00
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = Rock_with_Covenant_Harbor
+		}
+		x = 13
+		y = 1
+			completion_reward = {   
+			custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }  
+			add_popularity = { ideology = genshin popularity = 0.1 }			
+					army_experience = 25
+					add_nuclear_bombs = 10
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = Send_Rock_Emperor_to_the_Guillotine
+		icon = goal_Zhongli2
+		cost = 7.00
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = Please_Immortal_Ceremony
+		}
+		x = 13
+		y = 2
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_stability = -0.15
+					country_event = {
+							id = super.2
+							days = 1
+						}
+					add_ideas = fascist_revolutionaries
+					add_ideas = communist_revolutionaries
+					set_politics = {
+							ruling_party = neutrality
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+							}
+							set_popularities = {
+									neutrality = 40
+									communism = 25
+									democratic = 10
+									fascism = 25
+								}
+						}
+				}
+
+	focus = {
+		id = Set_up_a_Task_Force
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = Send_Rock_Emperor_to_the_Guillotine
+		}
+		x = 13
+		y = 3
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_state_core = 29
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Tell_the_World
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = Set_up_a_Task_Force
+		}
+		x = 12
+		y = 4
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = Hide_the_Sky_and_Cross_the_Sea
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = Set_up_a_Task_Force
+		}
+		x = 14
+		y = 4
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+					country_event = { id = LYY.3  days = 5  }
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 63
+        num_provinces = 1
+    }
+				
+    defender = {
+        state = 131
+        num_provinces = 1
+
+    }
+}
+				}
+
+	}
+	focus = {
+		id = Military_Control
+		icon = goal_DOT02
+		cost = 7.00
+		prerequisite = {
+			focus = Hide_the_Sky_and_Cross_the_Sea
+		}
+		x = 14
+		y = 5
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			news_event = { id = Teyvat_News.26  days = 20 }
+			add_stability = 0.05
+			add_political_power = 160
+				
+				}
+
+	}
+	focus = {
+		id = Censorship
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = Military_Control
+		}
+		x = 14
+		y = 6
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_research_slot = 1
+					add_stability = 0.05
+					add_nuclear_bombs = 100
+				}
+
+	}
+	focus = {
+		id = newfocus_18
+		icon = goal_Zhongli2
+		cost = 7.00
+		prerequisite = {
+			focus = Reforming_Economy
+		}
+		x = 18
+		y = 1
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_manpower = 64800
+					add_fuel = 400
+				}
+
+	}
+	focus = {
+		id = newfocus_19
+		icon = goal_Zhongli2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_18
+		}
+		x = 18
+		y = 2
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_state_claim = 29
+					add_offsite_building = { type = arms_factory level = 1 }   add_offsite_building = { type = industrial_complex level = 1 }   
+				}
+
+	}
+	focus = {
+		id = The_New_Deal
+		icon = goal_LYY_NingGuang03
+		cost = 7.00
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = newfocus_19
+		}
+		prerequisite = {
+			focus = Send_Rock_Emperor_to_the_Guillotine
+		}
+		x = 18
+		y = 3
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+add_stability = 0.05			
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 77
+        num_provinces = 1
+
+    }				
+    defender = {
+        state = 205
+        num_provinces = 1
+    }
+}
+
+
+add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = newfocus_27
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = The_New_Deal
+		}
+		x = 17
+		y = 4
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = radar_tech
+}			
+					add_manpower = 64800
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = newfocus_49
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_27
+		}
+		x = 17
+		y = 5
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+start_border_war = { 
+    change_state_after_war = no
+    attacker = { state = 107  num_provinces = 1 }			
+    defender = { state = 304  num_provinces = 1 }
+}
+				}
+
+	}
+	focus = {
+		id = newfocus_28
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = The_New_Deal
+		}
+		x = 19
+		y = 4
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }  
+add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = radar_tech
+}			
+					add_manpower = 64800
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = newfocus_50
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_28
+		}
+		x = 19
+		y = 5
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }  
+set_technology = {
+	improved_submarine_snorkel = 1
+}			
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = LYY_Stone_Gates_Or_War
+		icon = goal_MOT
+		cost = 7.00
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = newfocus_50
+		}
+		prerequisite = {
+			focus = newfocus_49
+		}
+		x = 18
+		y = 6
+			completion_reward = {   
+			custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			 leave_faction = yes
+			 create_faction = For_Stone_Gates
+	add_equipment_to_stockpile = { type = infantry_equipment  amount = 10000  producer = GER }
+	create_wargoal = { type = puppet_wargoal_focus  target = MOT }
+	create_wargoal = { type = puppet_wargoal_focus  target = RAG }
+	create_wargoal = { type = puppet_wargoal_focus  target = LAW }
+	create_wargoal = { type = puppet_wargoal_focus  target = GUN }
+	create_wargoal = { type = puppet_wargoal_focus  target = FAV }
+	create_wargoal = { type = puppet_wargoal_focus  target = DRA }
+	create_wargoal = { type = puppet_wargoal_focus  target = DVA }
+	create_wargoal = { type = puppet_wargoal_focus  target = AND }
+	create_wargoal = { type = puppet_wargoal_focus  target = SPI }	
+	    add_state_core = 16
+		add_state_core = 7
+		add_state_core = 23
+		add_state_core = 29
+		add_state_core = 52
+		add_state_core = 63
+		add_state_core = 360
+		add_state_core = 40
+		add_state_core = 41
+		add_state_core = 45
+		add_state_core = 51
+hidden_effect = {
+add_state_core = 356
+add_state_core = 357
+add_state_core = 153
+add_state_core = 191
+add_state_core = 218
+add_state_core = 258
+add_state_core = 300
+add_state_core = 320
+add_state_core = 340
+add_state_core = 350
+}		
+				}
+
+	}
+	focus = {
+		id = newfocus_23
+		icon = goal_DOT01
+		cost = 7.00
+		prerequisite = {
+			focus = Teyvat_Strategy
+		}
+		x = 24
+		y = 1
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+set_technology = {
+
+	improved_ship_hull_submarine = 1
+
+}
+create_wargoal = { type = puppet_wargoal_focus  target = SUM }			
+					add_manpower = 64800
+hidden_effect = {
+add_state_core = 356
+add_state_core = 357
+add_state_core = 153
+add_state_core = 191
+add_state_core = 218
+add_state_core = 258
+add_state_core = 300
+add_state_core = 320
+add_state_core = 340
+add_state_core = 350
+}
+				}
+
+	}
+	focus = {
+		id = newfocus_29
+		icon = goal_DOT01
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_23
+		}
+		x = 24
+		y = 2
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+set_technology = {
+
+	improved_ship_hull_carrier = 1
+
+}			
+			 leave_faction = yes
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = PRI
+		icon = goal_DOT01
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_29
+		}
+		x = 22
+		y = 3
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+set_technology = {
+
+	strategic_bomber1 = 1
+}
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = LYY
+		icon = goal_DOT01
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_29
+		}
+		x = 24
+		y = 3
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_offsite_building = { type = arms_factory level = 1 }   add_offsite_building = { type = industrial_complex level = 1 }   
+				}
+
+	}
+	focus = {
+		id = ABY
+		icon = goal_DOT01
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_29
+		}
+		x = 26
+		y = 3
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_offsite_building = { type = arms_factory level = 1 }   add_offsite_building = { type = industrial_complex level = 1 }   
+				}
+
+	}
+	focus = {
+		id = Destiny_is_not_enough_to_fear
+		icon = goal_DOT02
+		cost = 7.00
+		prerequisite = {
+			focus = LYY
+		}
+		prerequisite = {
+			focus = ABY
+		}
+		prerequisite = {
+			focus = PRI
+		}
+		x = 24
+		y = 4
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		
+					create_faction = Anti_Sky
+					create_wargoal = { type = puppet_wargoal_focus  target = PRI }
+		add_state_core = 355
+		add_state_core = 356
+		add_state_core = 357
+		add_state_core = 358
+		add_state_core = 359
+				}
+
+	}
+	focus = {
+		id = newfocus_98
+		icon = goal_DOT02
+		cost = 7.00
+		prerequisite = {
+			focus = Destiny_is_not_enough_to_fear
+		}
+		x = 24
+		y = 5
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+set_technology = {
+
+	heavy_fighter2 = 1
+}			
+					add_war_support = 0.05
+				}
+
+	}
+	focus = {
+		id = Abyss_is_not_enough_to_fear
+		icon = goal_DOT02
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_98
+		}
+		x = 24
+		y = 6
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			 
+		create_wargoal = { type = puppet_wargoal_focus  target = ABY }
+		add_state_core = 349
+				}
+
+	}
+	focus = {
+		id = Make_LYY_Great_Again
+		icon = goal_LYY_NingGuang03
+		cost = 7.00
+		prerequisite = {
+			focus = Abyss_is_not_enough_to_fear
+		}
+		x = 24
+		y = 7
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_war_support = 0.05
+				}
+
+	}
+	focus = {
+		id = Son_of_People
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = Liyue_Strategy
+		}
+		x = 28
+		y = 1
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+set_technology = { basic_encryption = 1  }			
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Economic_Recovery_Act
+		icon = GFX_goal_generic_consumer_goods
+		cost = 7.00
+		prerequisite = {
+			focus = Liyue_Strategy
+		}
+		x = 31
+		y = 1
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+set_technology = { basic_decryption = 1  }			
+					add_war_support = 0.05
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = Urban_and_rural_construction_movement
+		icon = GFX_goal_generic_construction
+		cost = 7.00
+		prerequisite = {
+			focus = Economic_Recovery_Act
+		}
+		x = 31
+		y = 2
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+set_technology = { improved_machine_tools = 1  }			
+					add_political_power = 160
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Urban_industrial_park
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 7.00
+		prerequisite = {
+			focus = Urban_and_rural_construction_movement
+		}
+		x = 29
+		y = 3
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_war_support = 0.05
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = Fontaine_Railway_Technology
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 8.00
+		prerequisite = {
+			focus = Urban_and_rural_construction_movement
+		}
+		x = 33
+		y = 3
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = infrastructure level = 1 }
+					add_political_power = 160
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Comprehensive_road_network_construction_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 7.00
+		prerequisite = {
+			focus = Fontaine_Railway_Technology
+		}
+		x = 33
+		y = 4
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = infrastructure level = 1 }
+					add_war_support = 0.05
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = Improving_Maritime_Transport_System
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 7.00
+		prerequisite = {
+			focus = Comprehensive_road_network_construction_plan
+		}
+		x = 33
+		y = 5
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = infrastructure level = 1 }
+					add_political_power = 160
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Integrate_the_highway_and_railway_network_system
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 7.00
+		prerequisite = {
+			focus = Improving_Maritime_Transport_System
+		}
+		x = 33
+		y = 6
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = dockyard level = 1 }
+					army_experience = 25
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = Liyue_Industrial_planning
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 7.00
+		prerequisite = {
+			focus = Liyue_Strategy
+		}
+		x = 36
+		y = 1
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = dockyard level = 1 }
+					add_political_power = 160
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Hyrimoon_Arsenal_I
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 7.00
+		prerequisite = {
+			focus = Liyue_Industrial_planning
+		}
+		x = 35
+		y = 2
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+			
+			add_offsite_building = { type = dockyard level = 1 }
+					army_experience = 25
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = Modern_Military_Enterprise
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 7.00
+		prerequisite = {
+			focus = Liyue_Industrial_planning
+		}
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		add_offsite_building = { type = arms_factory level = 1 }
+					add_political_power = 160
+					add_manpower = 64800
+				}
+		x = 37
+		y = 2
+
+	}
+	focus = {
+		id = Hyrimoon_Arsenal_II
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 8.00
+		prerequisite = {
+			focus = Hyrimoon_Arsenal_I
+		}
+		prerequisite = {
+			focus = Modern_Military_Enterprise
+		}
+		x = 36
+		y = 3
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = arms_factory level = 1 }
+					add_political_power = 160
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Hyrimoon_Arsenal_III
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 7.00
+		prerequisite = {
+			focus = Hyrimoon_Arsenal_II
+		}
+		x = 36
+		y = 4
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+set_technology = { improved_oil_plant = 1  }			
+			add_offsite_building = { type = arms_factory level = 1 }
+					army_experience = 25
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = Panzer_Crash_Plan
+		icon = GFX_goal_generic_army_tanks
+		cost = 7.00
+		prerequisite = {
+			focus = Hyrimoon_Arsenal_III
+		}
+		x = 36
+		y = 5
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = industrial_complex level = 1 }
+					add_political_power = 160
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Blitzkrieg_Tactical_Counterattack
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 7.00
+		prerequisite = {
+			focus = Panzer_Crash_Plan
+		}
+		x = 36
+		y = 6
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+set_technology = { blitzkrieg = 1  }			
+					army_experience = 25
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = Development_of_Military
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = Liyue_Strategy
+		}
+		x = 39
+		y = 1
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }  
+set_technology = { volkssturm = 1  }			
+			add_offsite_building = { type = arms_factory level = 1 }
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Emphasis_on_Technology
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = Liyue_Strategy
+		}
+		x = 41
+		y = 1
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			set_technology = { basic_heavy_cruiser = 1  }	
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Industrial_Construction
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = Liyue_Strategy
+		}
+		x = 43
+		y = 1
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }  
+set_technology = { construction2 = 1  }				
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = newfocus_96
+		icon = goal_LYY2
+		cost = 0.00
+		prerequisite = {
+			focus = Emphasis_on_Technology
+		}
+		prerequisite = {
+			focus = Industrial_Construction
+		}
+		prerequisite = {
+			focus = Development_of_Military
+		}
+		x = 41
+		y = 7
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }  
+set_technology = { excavation1 = 1  }				
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = newfocus_133
+		icon = goal_DOT04
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_120
+		}
+		x = 35
+		y = 10
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+					add_nuclear_bombs = 1
+				}
+
+	}
+	focus = {
+		id = newfocus_134
+		icon = goal_DOT04
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_120
+		}
+		x = 37
+		y = 10
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			set_technology = { paratroopers = 1  }
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = newfocus_136
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_133
+		}
+		prerequisite = {
+			focus = newfocus_134
+		}
+		x = 36
+		y = 11
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_offsite_building = { type = arms_factory level = 1 }   add_offsite_building = { type = industrial_complex level = 1 }   
+				}
+
+	}
+	focus = {
+		id = newfocus_135
+		icon = goal_DOT04
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_120
+		}
+		x = 39
+		y = 10
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }
+add_mines = { region = 2 amount = 100 }			
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = newfocus_137
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_134
+		}
+		prerequisite = {
+			focus = newfocus_135
+		}
+		x = 38
+		y = 11
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_mines = { region = 1 amount = 100 }	
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = newfocus_138
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_137
+		}
+		prerequisite = {
+			focus = newfocus_136
+		}
+		x = 37
+		y = 12
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_offsite_building = { type = arms_factory level = 1 }   add_offsite_building = { type = industrial_complex level = 1 }   
+				}
+
+	}
+	focus = {
+		id = Support_of_Rock_Army
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_46
+		}
+		x = 31
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_mines = { region = 3 amount = 100 }
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Disband_Rock_Army
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_46
+		}
+		x = 33
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = The_Second_Civil_War_of_Liyue
+		icon = goal_Zhongli2
+		cost = 7.00
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = newfocus_115
+		}
+		prerequisite = {
+			focus = newfocus_116
+		}
+		x = 24
+		y = 23
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+				
+				add_manpower = 64800
+				add_resource = {
+    type = oil
+    amount = 100
+}
+				}
+
+	}
+	focus = {
+		id = War_and_Peace
+		icon = goal_Zhongli2
+		cost = 7.00
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = Seven_Star_Revolutionary_Committee
+			focus = Yuehai_Pavilion_Eight_Provinces_Alliance
+			focus = Immortal_Heavenly_Palace
+		}
+		x = 13
+		y = 11
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }
+					news_event = { id = LYY_News.4 days = 20 }
+					army_experience = 25
+					country_event = {
+							id = Civil_War_of_Liyue.1
+							days = 1
+						}
+				}
+
+	}
+	focus = {
+		id = Seven_Star_Revolutionary_Committee
+		icon = goal_LYY_KeQing03
+		cost = 7.00
+		prerequisite = {
+			focus = The_First_Civil_War_of_Liyue
+		}
+		mutually_exclusive = {
+			focus = Immortal_Heavenly_Palace
+			focus = Yuehai_Pavilion_Eight_Provinces_Alliance
+		}
+		x = 15
+		y = 10
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					remove_ideas = communist_revolutionaries
+					remove_ideas = fascist_revolutionaries
+					add_stability = 0.20
+					set_politics = {
+							ruling_party = communism
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+					set_popularities = {
+							neutrality = 10
+							communism = 60
+							democratic = 10
+							fascism = 10
+						}
+				}
+
+	}
+	focus = {
+		id = Immortal_Heavenly_Palace
+		icon = goal_LYY_ShenHe03
+		cost = 7.00
+		prerequisite = {
+			focus = The_First_Civil_War_of_Liyue
+		}
+		mutually_exclusive = {
+			focus = Seven_Star_Revolutionary_Committee
+			focus = Yuehai_Pavilion_Eight_Provinces_Alliance
+		}
+		x = 11
+		y = 10
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					remove_ideas = communist_revolutionaries
+					remove_ideas = fascist_revolutionaries
+					add_stability = 0.20
+					set_politics = {
+							ruling_party = fascism
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+					set_popularities = {
+							neutrality = 10
+							communism = 10
+							democratic = 10
+							fascism = 60
+						}
+				}
+
+	}
+	focus = {
+		id = Yuehai_Pavilion_Eight_Provinces_Alliance
+		icon = goal_LYY_GanYu03
+		cost = 7.00
+		prerequisite = {
+			focus = The_First_Civil_War_of_Liyue
+		}
+		mutually_exclusive = {
+			focus = Immortal_Heavenly_Palace
+			focus = Seven_Star_Revolutionary_Committee
+		}
+		x = 13
+		y = 10
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					set_politics = {
+							ruling_party = democratic
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+					set_popularities = {
+							neutrality = 0
+							communism = 20
+							democratic = 50
+							fascism = 20
+						}
+						add_stability = 0.20
+				}
+
+	}
+	focus = {
+		id = Shenhe
+		icon = goal_LYY_ShenHe03
+		cost = 7.00
+		prerequisite = {
+			focus = War_and_Peace
+		}
+		mutually_exclusive = {
+			focus = Ganyu
+			focus = Keqing
+		}
+		x = 10
+		y = 12
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_country_leader_trait = dictator
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = SNE_Amry
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = War_and_Peace
+		}
+		x = 6
+		y = 12
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_country_leader_trait = dictator
+				news_event = { id = Teyvat_News.20  days = 1  }
+				add_stability = 0.05				
+				}
+
+	}
+	focus = {
+		id = newfocus_119
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = Shenhe
+		}
+		x = 8
+		y = 13
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 3.0
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = newfocus_122
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_119
+		}
+		x = 8
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_decryption = {
+    target = LYY
+    amount = 30
+}
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = newfocus_123
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_122
+		}
+		x = 9
+		y = 15
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+add_nationality = MOT			
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = newfocus_118
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = Shenhe
+		}
+		x = 10
+		y = 13
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_ideas = soviet_german_friendship
+				}
+
+	}
+	focus = {
+		id = newfocus_151
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_118
+		}
+		x = 10
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_fuel = 400
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Ganyu
+		icon = goal_LYY_GanYu03
+		cost = 7.00
+		prerequisite = {
+			focus = War_and_Peace
+		}
+		mutually_exclusive = {
+			focus = Shenhe
+			focus = Keqing
+		}
+		x = 18
+		y = 12
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_country_leader_trait = dictator
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = Introduce_Foreign_Investment
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Ganyu
+		}
+		x = 15
+		y = 13
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 3.0
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = Make_Friends_with_Fontaine
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Introduce_Foreign_Investment
+		}
+		x = 15
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			diplomatic_relation = { country = FON  relation = non_aggression_pact  active = yes  } 
+			add_equipment_to_stockpile = { type = train_equipment amount = 1000 producer = FON }
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Make_Friends_with_SNE
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Make_Friends_with_Fontaine
+		}
+		x = 15
+		y = 15
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			diplomatic_relation = { country = SNE  relation = non_aggression_pact  active = yes  }
+			add_equipment_to_stockpile = { type = infantry_equipment  amount = 10000  producer = SNE }
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Advanced_Production_Lines
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Make_Friends_with_SNE
+		}
+		x = 15
+		y = 16
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			supply_units = 24
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = Military_Assistance
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Advanced_Production_Lines
+		}
+		x = 15
+		y = 17
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = newfocus_97
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Ganyu
+		}
+		x = 18
+		y = 13
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_ideas = soviet_german_friendship
+				}
+
+	}
+	focus = {
+		id = Annexation_Feiyun_Commerce
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = United_Feiyun_Commerce
+		}
+		x = 18
+		y = 15
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_fuel = 400
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = newfocus_100
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Ganyu
+		}
+		x = 21
+		y = 13
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Establish_Seven_Star_Guard
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_100
+		}
+		x = 21
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = Ensure_the_Loyalty_of_Rock_Army
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Establish_Seven_Star_Guard
+		}
+		x = 21
+		y = 15
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_fuel = 400
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Keqing
+		icon = goal_LYY_KeQing03
+		cost = 7.00
+		prerequisite = {
+			focus = War_and_Peace
+		}
+		mutually_exclusive = {
+			focus = Ganyu
+			focus = Shenhe
+		}
+		x = 30
+		y = 12
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_country_leader_trait = dictator
+					add_political_power = 360
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = Unite_the_Workers
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = Keqing
+		}
+		x = 27
+		y = 13
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 3.0
+							technology = motorised_infantry
+						}
+				}
+
+	}
+	focus = {
+		id = Establishment_of_Guild
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = Unite_the_Workers
+		}
+		x = 27
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = Unite_the_Peasants
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = Keqing
+		}
+		x = 29
+		y = 13
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_ideas = soviet_german_friendship
+				}
+
+	}
+	focus = {
+		id = Establishment_of_Farmer_Association
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = Unite_the_Peasants
+		}
+		x = 29
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			
+			add_fuel = 400
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = Construction_of_Chasm
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = Establishment_of_Farmer_Association
+		}
+		prerequisite = {
+			focus = Establishment_of_Guild
+		}
+		x = 28
+		y = 15
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_state_core = 52
+					army_experience = 25
+					country_event = { id = LYY.4  days = 5  }
+				}
+
+	}
+	focus = {
+		id = Qingchezhuang_Construction
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = Construction_of_Chasm
+		}
+		x = 28
+		y = 16
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_state_core = 36
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = newfocus_46
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = Keqing
+		}
+		x = 32
+		y = 13
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_popularity = {
+							ideology = communism
+							popularity = 0.1
+						}
+				}
+
+	}
+	focus = {
+		id = newfocus_47
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = Support_of_Rock_Army
+			focus = Disband_Rock_Army
+		}
+		x = 32
+		y = 15
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					every_army_leader = {
+							add_planning = 1
+						}
+				}
+
+	}
+	focus = {
+		id = newfocus_48
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_47
+		}
+		x = 32
+		y = 16
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+					create_import = {
+    resource = steel
+    amount = 100
+    exporter = PRC
+}
+				}
+
+	}
+	focus = {
+		id = The_Call_of_Era_de_Rule_by_Human
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = Qingchezhuang_Construction
+		}
+		prerequisite = {
+			focus = newfocus_48
+		}
+		x = 30
+		y = 17
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+					add_political_power = 360
+				}
+
+	}
+	focus = {
+		id = Send_the_Immortal_Ceremony
+		icon = goal_DOT02
+		cost = 7.00
+		prerequisite = {
+			focus = Tell_the_World
+		}
+		x = 12
+		y = 5
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_ideas = communist_influence
+				}
+
+	}
+	focus = {
+		id = Immortals_Inquiries
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = Send_the_Immortal_Ceremony
+		}
+		x = 12
+		y = 6
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_ideas = fascist_influence
+				}
+
+	}
+	focus = {
+		id = The_First_Civil_War_of_Liyue
+		icon = goal_Zhongli2
+		cost = 7.00
+		prerequisite = {
+			focus = Wir_wollen_unseren_alten_Kaiser_Wilhelm_wiederhaben
+		}
+		prerequisite = {
+			focus = Fruit_Wine_Lake_Water_Battle
+		}
+		x = 13
+		y = 9
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 } 
+			news_event = { id = LYY_News.1 days = 20 }			
+					every_army_leader = {
+							add_planning = 1
+						}
+				}
+
+	}
+	focus = {
+		id = Prodrazvyorstka
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = Immortals_Inquiries
+			focus = Censorship
+		}
+		x = 13
+		y = 7
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+					add_stability = 0.05
+					country_event = { id = LYY.6  days = 5  }
+					add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = radar_tech
+}
+				}
+
+	}
+	focus = {
+		id = United_Feiyun_Commerce
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_97
+		}
+		x = 18
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+					country_event = { id = LYY.7  days = 5  }
+				}
+
+	}
+	focus = {
+		id = newfocus_101
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Annexation_Feiyun_Commerce
+		}
+		x = 18
+		y = 16
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = newfocus_104
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = Ensure_the_Loyalty_of_Rock_Army
+		}
+		x = 21
+		y = 16
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = Fruit_Wine_Lake_Water_Battle
+		icon = goal_Ningguang
+		cost = 7.00
+		prerequisite = {
+			focus = Cannonball_Morning_Winery
+		}
+		x = 18
+		y = 8
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_state_core = 10
+					every_army_leader = {
+							add_planning = 1
+						}
+				}
+
+	}
+	focus = {
+		id = Cannonball_Morning_Winery
+		icon = goal_MOT
+		cost = 7.00
+		prerequisite = {
+			focus = LYY_Stone_Gates_Or_War
+		}
+		x = 18
+		y = 7
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_state_core = 50
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = newfocus_107
+		icon = goal_MOT
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_101
+		}
+		x = 18
+		y = 17
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					army_experience = 25
+					add_tech_bonus = {
+    bonus = 0.5
+    uses = 1
+    category = radar_tech
+}
+				}
+
+	}
+	focus = {
+		id = newfocus_108
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_104
+		}
+		x = 21
+		y = 17
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Footsteps_of_New_Era
+		icon = goal_Ganyu2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_108
+		}
+		prerequisite = {
+			focus = newfocus_107
+		}
+		prerequisite = {
+			focus = Military_Assistance
+		}
+		x = 18
+		y = 18
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }  
+							
+					army_experience = 25
+				}
+
+	}
+	focus = {
+		id = New_Era
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = Footsteps_of_New_Era
+			focus = newfocus_128
+			focus = newfocus_127
+		}
+		x = 24
+		y = 19
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }  
+			set_state_name = "New_Liyue"			
+			add_threat = -10
+					add_offsite_building = { type = arms_factory level = 1 }   add_offsite_building = { type = industrial_complex level = 1 }   
+				}
+
+	}
+	focus = {
+		id = newfocus_111
+		icon = goal_LYY2
+		cost = 7.00
+		prerequisite = {
+			focus = New_Era
+		}
+		x = 24
+		y = 20
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = newfocus_113
+		icon = goal_LYY
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_111
+		}
+		x = 23
+		y = 21
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = newfocus_114
+		icon = goal_LYY
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_111
+		}
+		x = 25
+		y = 21
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_offsite_building = { type = arms_factory level = 1 }   add_offsite_building = { type = industrial_complex level = 1 }   
+				}
+
+	}
+	focus = {
+		id = newfocus_115
+		icon = goal_LYY
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_114
+		}
+		x = 25
+		y = 22
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_offsite_building = { type = arms_factory level = 1 }   add_offsite_building = { type = industrial_complex level = 1 }   
+				}
+
+	}
+	focus = {
+		id = newfocus_116
+		icon = goal_LYY
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_113
+		}
+		x = 23
+		y = 22
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = newfocus_117
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = Shenhe
+		}
+		x = 12
+		y = 13
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = newfocus_152
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_117
+		}
+		x = 12
+		y = 14
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_timed_idea = {
+			idea = soviet_german_friendship
+			days = 365 }
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = newfocus_124
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_152
+		}
+		x = 11
+		y = 15
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = newfocus_125
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_124
+		}
+		prerequisite = {
+			focus = newfocus_123
+		}
+		x = 10
+		y = 16
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					every_army_leader = {
+							add_planning = 1
+						}
+				}
+
+	}
+	focus = {
+		id = newfocus_126
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_125
+		}
+		x = 10
+		y = 17
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = newfocus_127
+		icon = goal_Shenhe2
+		cost = 7.00
+		prerequisite = {
+			focus = newfocus_126
+		}
+		x = 10
+		y = 18
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = newfocus_128
+		icon = goal_Keqing2
+		cost = 7.00
+		prerequisite = {
+			focus = The_Call_of_Era_de_Rule_by_Human
+		}
+		x = 30
+		y = 18
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+					}
+					add_political_power = 160
+				}
+
+	}
+	focus = {
+		id = Overall_Industrialization_of_Urban_Areas
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7.00
+		prerequisite = {
+			focus = Urban_industrial_park
+		}
+		x = 29
+		y = 4
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = industrial_complex level = 1 }
+					add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 100000
+							producer = GER
+						}
+				}
+
+	}
+	focus = {
+		id = Resource_Exploration_Committee
+		icon = GFX_goal_generic_construction2
+		cost = 7.00
+		prerequisite = {
+			focus = Overall_Industrialization_of_Urban_Areas
+		}
+		x = 29
+		y = 5
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = industrial_complex level = 1 }
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = Mining_tasks_of_strata_rock_giant_deep
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7.00
+		prerequisite = {
+			focus = Resource_Exploration_Committee
+		}
+		x = 30
+		y = 6
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = industrial_complex level = 1 }
+			country_event = { id = LYY.4  days = 5  }
+					add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 100000
+							producer = GER
+						}
+				}
+
+	}
+	focus = {
+		id = Resource_development_plan
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 7.00
+		prerequisite = {
+			focus = Resource_Exploration_Committee
+		}
+		x = 28
+		y = 6
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = arms_factory level = 1 }
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = Home_Ownership
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 7.00
+		prerequisite = {
+			focus = Resource_development_plan
+		}
+		prerequisite = {
+			focus = Integrate_the_highway_and_railway_network_system
+		}
+		prerequisite = {
+			focus = Mining_tasks_of_strata_rock_giant_deep
+		}
+		prerequisite = {
+			focus = Blitzkrieg_Tactical_Counterattack
+		}
+		x = 31
+		y = 7
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+			add_offsite_building = { type = arms_factory level = 1 }
+					add_ideas = soviet_german_friendship
+				}
+
+	}
+	focus = {
+		id = newfocus_120
+		icon = goal_DOT04
+		cost = 7.00
+		prerequisite = {
+			focus = Home_Ownership
+		}
+		prerequisite = {
+			focus = Make_LYY_Great_Again
+		}
+		prerequisite = {
+			focus = Fruit_Wine_Lake_Water_Battle
+		}
+		prerequisite = {
+			focus = newfocus_96
+		}
+		x = 37
+		y = 9
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+					add_manpower = 64800
+				}
+
+	}
+	focus = {
+		id = Wir_wollen_unseren_alten_Kaiser_Wilhelm_wiederhaben
+		icon = goal_Zhongli2
+		cost = 7.00
+		prerequisite = {
+			focus = Prodrazvyorstka
+		}
+		x = 13
+		y = 8
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_country_leader_trait = dictator
+					country_event = { id = LYY.5  days = 5  }
+				}
+
+	}
+	focus = {
+		id = An_Unfinished_Road
+		icon = goal_Zhongli2
+		cost = 7.00
+		x = 4
+		y = 0
+		available = { original_tag = PRI   }
+		ai_will_do = {
+					factor = 0
+				}
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					add_political_power = 160
+					load_focus_tree = LYY_04
+				}
+
+	}
+}

@@ -1,0 +1,39 @@
+
+state={
+	id=193
+	name="Pearl_Beach"
+	resources={
+		tungsten=2.000
+		steel=6.000
+		chromium=1.000
+		oil=5.000
+		rubber=1.000
+		aluminium=1.000
+	}
+
+	history={
+		victory_points = {
+			1220 20 
+		}
+		owner = SAN
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = INA
+		add_core_of = SAN
+		add_core_of = ASA
+		add_core_of = TSU
+
+	}
+
+	provinces={
+		321 1220 2625 7347 7365 7384 7424 7439 7448 
+	}
+	manpower=2000000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=1.000
+}

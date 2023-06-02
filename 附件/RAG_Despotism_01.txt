@@ -1,0 +1,933 @@
+focus_tree = {
+	id = RAG_Despotism
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = RAGD
+		}
+	}
+	default = no
+	continuous_focus_position = { x=2000 y=2000} #持续性国策位置
+	
+	#available 国策前提条件
+	#bypass 国策跳过条件
+	
+##########RAG02###
+
+
+	focus = {
+		id = RAG_Make_MOT_Great_Again
+		icon = goal_RAG02
+		cost = 5.00
+		x = 50
+		y = 2
+		prerequisite = {
+			focus = Aristocratic_Young_Lord
+		}
+		available = { OR = {
+						original_tag = RAG
+					 }   }
+		mutually_exclusive = {
+
+		}
+			completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+					kill_country_leader = yes
+					add_ideas = { Heroes_of_Night }
+					remove_ideas = { For_Knight	}					
+					set_politics = {
+							ruling_party = neutrality
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+					set_popularities = {
+							neutrality = 50
+							communism = 10
+							democratic = 10
+							fascism = 10
+							genshin = 10
+						}
+					create_country_leader = {
+							name = "Diluc"
+							desc = "Diluc_desc"
+							picture = "gfx/leaders/LY/Diluc.dds"
+							expire = "1965.1.1"
+							ideology = despotism
+							traits = {
+
+}
+}
+				}
+	}
+	focus = {
+		id = RAG_Fontaine_Railway_Technology
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Course_of_the_Clouds
+		}
+		x = 43
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		leave_faction = yes	
+		add_fuel = 400		
+		add_to_faction = FON
+				    }
+
+	}
+	focus = {
+		id = RAG_Form_MOT_Merchant_Association
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Make_MOT_Great_Again
+		}
+		x = 46
+		y = 3
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	focus = {
+		id = RAG_Contact_Northland_Bank
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Form_MOT_Merchant_Association
+		}
+		x = 46
+		y = 4
+				completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+				       add_political_power = 120
+
+					   create_faction = RAG-SNE
+					   add_to_faction = SNE
+				    }
+
+	}
+	focus = {
+		id = RAG_Secretary_Rosalynn
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Contact_Northland_Bank
+		}
+		x = 46
+		y = 5
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_research_slot = 1 }
+
+	}
+	focus = {
+		id = RAG_Open_Cangfeng_Military_School
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Make_MOT_Great_Again
+		}
+		x = 50
+		y = 3
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_war_support = 0.10
+ }
+
+	}
+	focus = {
+		id = RAG_The_Incident_With_the_USS_Falga
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Open_Cangfeng_Military_School
+		}
+		x = 50
+		y = 4
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_offsite_building = { type = dockyard level = 1 }
+		navy_experience = 25 }
+
+	}
+	focus = {
+		id = RAG_Natlan_Military_Training
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Incident_With_the_USS_Falga
+		}
+		x = 50
+		y = 5
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    army_experience = 25 air_experience = 25 navy_experience = 25 }
+
+	}
+	focus = {
+		id = RAG_The_Fate_of_the_MOT
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Make_MOT_Great_Again
+		}
+		x = 54
+		y = 3
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		
+		add_political_power = 60  add_stability = 0.05 }
+
+	}
+	focus = {
+		id = RAG_International_Students_To_SNE
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Fate_of_the_MOT
+		}
+		x = 54
+		y = 4
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    army_experience = 25 }
+
+	}
+	focus = {
+		id = RAG_Diary_of_Diluc
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_International_Students_To_SNE
+		}
+		x = 54
+		y = 5
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	focus = {
+		id = RAG_The_First_MOT_Unification_War
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Natlan_Military_Training
+		}
+		prerequisite = {
+			focus = RAG_Diary_of_Diluc
+		}
+		prerequisite = {
+			focus = RAG_Secretary_Rosalynn
+		}
+		x = 50
+		y = 6
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		leave_faction = yes	
+		add_political_power = 50
+		set_state_owner = 49
+		set_state_owner = 50
+		set_state_controller = 49
+		set_state_controller = 50
+		
+		}
+
+	}
+	focus = {
+		id = RAG_Head_West_To_the_Wolves
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_First_MOT_Unification_War
+		}
+		x = 48
+		y = 7
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		army_experience = 25 air_experience = 25
+						MOT = { end_puppet = AND }
+						leave_faction = yes			
+					declare_war_on = {
+							target = AND
+							type = annex_everything
+						}
+					
+	} }
+	focus = {
+		id = RAG_Head_east_To_Clear_Spring
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_First_MOT_Unification_War
+		}
+		x = 52
+		y = 7
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		MOT = { end_puppet = SPI }
+		leave_faction = yes	
+		declare_war_on = {
+		target = SPI
+		type = annex_everything
+						}
+		
+		army_experience = 25 air_experience = 25 }
+
+	}
+	focus = {
+		id = RAG_Nite_Owl_National_Government
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Head_east_To_Clear_Spring
+		}
+		prerequisite = {
+			focus = RAG_Head_West_To_the_Wolves
+		}
+		x = 50
+		y = 8
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_political_power = 160 
+		declare_war_on = {
+							target = RAG
+							type = annex_everything
+						}
+						
+		declare_war_on = {
+							target = MOT
+							type = annex_everything
+						}
+						
+		
+		add_manpower = 64800 }
+
+	}
+	focus = {
+		id = RAG_The_MOT_Industrial_And_Commercial_Revitalization_Program
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Nite_Owl_National_Government
+		}
+		x = 58
+		y = 9
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_research_slot = 1 }
+
+	}
+	focus = {
+		id = RAG_Brother_Can_Uniformly_Resist_Others_Bully
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Nite_Owl_National_Government
+		}
+		x = 46
+		y = 9
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+				       create_faction = For_MOT
+				       add_political_power = 120
+					   add_to_faction = LAW
+				    }
+
+	}
+	focus = {
+		id = RAG_Resisting_Foreign_Aggression_Home_Safe
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Nite_Owl_National_Government
+		}
+		x = 53
+		y = 9
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+				       create_faction = For_MOT
+				       add_political_power = 120
+				    }
+
+	}
+	focus = {
+		id = RAG_Changing_Northwestern_Banner
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Resisting_Foreign_Aggression_Home_Safe
+		}
+		x = 55
+		y = 10
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		declare_war_on = { 	target = DVA
+		type = annex_everything}
+		
+		army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+
+	}
+	focus = {
+		id = RAG_Movement_of_Enclosures
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_MOT_Industrial_And_Commercial_Revitalization_Program
+		}
+		x = 58
+		y = 10
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_stability = -0.05
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_manpower = -64800 }
+
+	}
+	focus = {
+		id = RAG_The_Currency_Reform_Act
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Movement_of_Enclosures
+		}
+		x = 58
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	focus = {
+		id = RAG_Take_Over_the_Cattail_Liquor_Business
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Currency_Reform_Act
+		}
+		x = 58
+		y = 12
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_stability = -0.05
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_offsite_building = { type = infrastructure level = 1 }
+		}
+
+	}
+	focus = {
+		id = RAG_Ming_Crown_Gorge_Arsenal
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Take_Over_the_Cattail_Liquor_Business
+		}
+		x = 57
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    	
+		add_offsite_building = { type = arms_factory level = 1 }
+		}
+
+	}
+	focus = {
+		id = RAG_The_Factory_in_Starfall_Lake
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Take_Over_the_Cattail_Liquor_Business
+		}
+		x = 59
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    	
+		add_offsite_building = { type = industrial_complex level = 1 }
+		}
+
+	}
+	focus = {
+		id = RAG_Lookout-Oath_Line
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Factory_in_Starfall_Lake
+		}
+		prerequisite = {
+			focus = RAG_Ming_Crown_Gorge_Arsenal
+		}
+		x = 58
+		y = 14
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    	
+		add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = air_base level = 1 }
+			}
+
+	}
+	focus = {
+		id = RAG_The_Cider_Act
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Lookout-Oath_Line
+		}
+		x = 58
+		y = 15
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	focus = {
+		id = RAG_War_Propaganda_For_the_PRI
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Brother_Can_Uniformly_Resist_Others_Bully
+		}
+		x = 46
+		y = 10
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_war_support = 0.15  add_stability = -0.05 }
+
+	}
+	focus = {
+		id = RAG_The_Southern_Meeting
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_War_Propaganda_For_the_PRI
+		}
+		x = 44
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	focus = {
+		id = RAG_The_Course_of_the_Clouds
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Southern_Meeting
+		}
+		mutually_exclusive = {
+			focus = RAG_Stone_Gate_Crisis
+		}
+		x = 43
+		y = 12
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		leave_faction = yes	
+		add_fuel = 400
+		create_faction = RAG-LYY		
+		add_to_faction = LYY
+				    }
+
+	}
+	focus = {
+		id = RAG_Stone_Gate_Crisis
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Southern_Meeting
+		}
+		mutually_exclusive = {
+			focus = RAG_The_Course_of_the_Clouds
+		}
+		x = 45
+		y = 12
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		start_border_war = { 
+    change_state_after_war = no
+    attacker = { state = 63  num_provinces = 1 }			
+    defender = { state = 131  num_provinces = 1 }
+}
+}
+	}
+	focus = {
+		id = RAG_To_Conquer_the_World_Must_First_Conquer_Liyue
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Stone_Gate_Crisis
+		}
+		x = 45
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		
+		declare_war_on = { 	target = LYY
+		type = annex_everything }
+		declare_war_on = { 	target = KQP
+		type = annex_everything }
+		declare_war_on = { 	target = GYP
+		type = annex_everything }
+		declare_war_on = { 	target = SHP
+		type = annex_everything }
+		 
+		 army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+
+	}
+	focus = {
+		id = RAG_Main_northwest_Battlefield_of_Teyvat
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Dandelion_Sea_Militia_Against_Sky
+			focus = RAG_To_Conquer_the_World_Must_First_Conquer_Liyue
+			focus = RAG_Fontaine_Railway_Technology
+		}
+		x = 46
+		y = 14
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		declare_war_on = { 	target = PRI
+		type = annex_everything}
+		
+		army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+
+	}
+	focus = {
+		id = RAG_Tactics_of_the_Dawn
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Main_northwest_Battlefield_of_Teyvat
+		}
+		x = 44
+		y = 15
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    army_experience = 25 air_experience = 25 navy_experience = 25 }
+		
+
+	}
+	focus = {
+		id = RAG_Eagle_Flying_Mouth_Resolution
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Tactics_of_the_Dawn
+		}
+		x = 44
+		y = 16
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	focus = {
+		id = RAG_MOT-SNE_Treaty_of_Friendship
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Main_northwest_Battlefield_of_Teyvat
+		}
+		x = 48
+		y = 15
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		leave_faction = yes	
+				       add_political_power = 120
+
+					   create_faction = RAG-SNE
+					   add_to_faction = SNE
+				    }
+
+	}
+	focus = {
+		id = RAG_SUM_Expeditionary_Force
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_MOT-SNE_Treaty_of_Friendship
+		}
+		x = 47
+		y = 16
+				completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		
+				       add_political_power = 120
+					   add_to_faction = SUM
+				    }
+
+	}
+	focus = {
+		id = RAG_Dragon_Ruins_Problem
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_MOT-SNE_Treaty_of_Friendship
+		}
+		x = 49
+		y = 16
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		add_war_support = 0.1
+	
+	declare_war_on = { 	target = DVA
+	type = annex_everything }
+	}
+
+	}
+	focus = {
+		id = RAG_Negotiations_in_the_Wind
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_War_Propaganda_For_the_PRI
+		}
+		x = 48
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+	
+	if = {  limit = { original_tag = MOT  }   
+    set_state_owner = 5
+	set_state_owner = 6
+	set_state_owner = 7
+	set_state_controller = 5
+	set_state_controller = 6
+	set_state_controller = 7
+
+     }
+		}
+
+	}
+	focus = {
+		id = RAG_The_7th_Revolutionary_Army_Newly_Formed_By_MOT
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Negotiations_in_the_Wind
+		}
+		x = 48
+		y = 12
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    army_experience = 25 air_experience = 25 }
+
+	}
+	focus = {
+		id = RAG_The_Dandelion_Sea_Militia_Against_Sky
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_7th_Revolutionary_Army_Newly_Formed_By_MOT
+		}
+		x = 48
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	focus = {
+		id = RAG_Starfall_Lake_Conference
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Resisting_Foreign_Aggression_Home_Safe
+		}
+		
+		x = 52
+		y = 10
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		set_state_owner = 10
+	    set_state_controller = 10
+		}
+
+	}
+	focus = {
+		id = RAG_No_Resistance_Order
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Starfall_Lake_Conference
+		}
+		x = 51
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = 64800 }
+
+	}
+	focus = {
+		id = RAG_Peace_of_Fruit_Wine_Lake
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_No_Resistance_Order
+		}
+		x = 51
+		y = 12
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		set_state_owner = 17
+		set_state_controller = 17
+		}
+
+	}
+	focus = {
+		id = RAG_The_Amount_of_the_Material_To_MOT
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Peace_of_Fruit_Wine_Lake
+		}
+		x = 51
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_political_power = 160 add_manpower = -64800 }
+
+	}
+	focus = {
+		id = RAG_The_Exterminating_Adventurers
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Starfall_Lake_Conference
+		}
+		x = 53
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+		add_offsite_building = { type = arms_factory level = 1 } 
+		add_manpower = -64800 }
+
+	}
+	focus = {
+		id = RAG_The_Coup_in_the_Wind
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Exterminating_Adventurers
+		}
+		x = 53
+		y = 12
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		
+	declare_war_on = { 	target = DRA
+	type = annex_everything }
+	}
+
+	}
+	focus = {
+		id = RAG_The_Stone_Will_Pass_the_knife
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Coup_in_the_Wind
+		}
+		x = 53
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		
+	declare_war_on = { 	target = LAW
+	type = annex_everything }
+	}
+
+	}
+	focus = {
+		id = RAG_Armageddon
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Knot_of_Foreign_happy
+		}
+		prerequisite = {
+			focus = RAG_The_Stone_Will_Pass_the_knife
+		}
+		prerequisite = {
+			focus = RAG_The_Amount_of_the_Material_To_MOT
+		}
+		x = 53
+		y = 14
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+
+	}
+	focus = {
+		id = RAG_Tear_Up_the_Peace_of_Cider_Lake
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Armageddon
+		}
+		x = 53
+		y = 15
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		declare_war_on = { 	target = ABY
+		type = annex_everything}
+		
+				    }
+
+	}
+	focus = {
+		id = RAG_The_One_Is_Perfect
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Tear_Up_the_Peace_of_Cider_Lake
+		}
+		x = 53
+		y = 16
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    add_stability = 0.1 }
+
+	}
+	focus = {
+		id = RAG_The_Gray_Wind_Rises
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_One_Is_Perfect
+		}
+		prerequisite = {
+			focus = RAG_Dragon_Ruins_Problem
+		}
+		prerequisite = {
+			focus = RAG_SUM_Expeditionary_Force
+		}
+		prerequisite = {
+			focus = RAG_Eagle_Flying_Mouth_Resolution
+		}
+		prerequisite = {
+			focus = RAG_The_Cider_Act
+		}
+		x = 53
+		y = 17
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+	add_timed_idea = { idea = For_Venti  days = 365 }	
+	declare_war_on = { 	target = SNE
+	type = annex_everything }
+
+	declare_war_on = { 	target = NAT
+	type = annex_everything }
+
+	declare_war_on = { 	target = SUM
+	type = annex_everything }
+	
+	declare_war_on = { 	target = INA
+	type = annex_everything }
+	
+	declare_war_on = { 	target = SAN
+	type = annex_everything }
+	
+
+	
+	}
+
+	}
+	focus = {
+		id = RAG_Start_the_Great_Northern_War
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Changing_Northwestern_Banner
+		}
+		x = 55
+		y = 11
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }   
+		declare_war_on = { 	target = MOT
+		type = annex_everything}
+		
+		declare_war_on = { 	target = FAV
+		type = annex_everything}
+		
+		army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+		
+
+	}
+	focus = {
+		id = RAG_Big_Loans_To_Clean_Up_the_Mess
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Start_the_Great_Northern_War
+		}
+		x = 55
+		y = 12
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+	add_political_power = -160
+	add_stability = 0.05
+	add_manpower = 64800
+	}
+
+	}
+	focus = {
+		id = RAG_Knot_of_Foreign_happy
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Big_Loans_To_Clean_Up_the_Mess
+		}
+		x = 55
+		y = 13
+		completion_reward = {   custom_effect_tooltip = Spend_One_Million_Mora   add_to_variable = { var = dx value = -1 }    
+	add_equipment_to_stockpile = { type = infantry_equipment  amount = 10000  producer = SNE }
+	}
+
+	}
+}

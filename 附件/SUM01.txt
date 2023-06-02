@@ -1,0 +1,903 @@
+focus_tree = {
+	id = SUM01
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = SUM
+				tag = VAN
+				tag = SGD
+				tag = SFG
+				
+				
+			}
+			
+		}
+	}
+	default = no
+	focus = {
+		id = Hold_Sabzeruz_Festival
+		icon = goal_SUM01 #GFX_goal_unknown
+		cost = 7.00  
+		x = 30
+		y = 0
+		available = { OR = {
+						original_tag = SUM
+					 }   }
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		
+		add_popularity = { ideology = genshin popularity = 0.1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+add_equipment_to_stockpile = { type = fighter_equipment_1  amount = 50 producer = MOT }
+add_equipment_to_stockpile = { type = infantry_equipment  amount = 10000  producer = LYY }
+add_equipment_to_stockpile = { type = motorized_equipment_1  amount = 1000 producer = INA }
+add_equipment_to_stockpile = { type = train_equipment amount = 1000 producer = SUM }
+add_equipment_to_stockpile = { type = transport_plane_equipment_1  amount = 1000 producer = PRI }
+country_event = { id = Ilyich.1  days = 1  }
+		}
+		
+
+	}
+	focus = {
+		id = Life_Short_While_Knowledge_Endless
+		icon = goal_SUM02
+		prerequisite = { focus = The_Dance_of_Flower_Godness }
+		cost = 7.00  
+		x = 21
+		y = 6
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Reform_Akademiya
+		icon = goal_SUM02
+		prerequisite = { focus = The_Dance_of_Flower_Godness }
+		cost = 7.00  
+		x = 30
+		y = 6
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = SUM_Construction_Project
+		icon = goal_SUM10
+		cost = 7.00  
+		x = 42
+		y = 3
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = The_Dream_of_Desert_Dwellers
+		icon = goal_SUM09
+		cost = 7.00  
+		prerequisite = { focus = The_Dance_of_Flower_Godness }
+		x = 45
+		y = 6
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_ideas = { The_Oath_of_Candace }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Money_and_Freedom
+		icon = goal_SUM04
+		cost = 7.00  
+		x = 18
+		y = 3
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Aranyaka
+		icon = goal_SUM02
+		cost = 7.00  
+		x = 18
+		y = 1
+		available = { OR = {
+						original_tag = VAN
+						original_tag = SGD
+						original_tag = SFG
+					 }   }
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		load_focus_tree = generic_focus
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Sumeru_Military_Construction
+		icon = goal_SUM02
+		prerequisite = { focus = The_Dance_of_Flower_Godness }
+		cost = 7.00  
+		x = 39
+		y = 6
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Support_Gilded_Brigades
+		icon = goal_SUM07
+		cost = 7.00  
+		prerequisite = {
+			focus = Money_and_Freedom
+		}
+		x = 16
+		y = 4
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Destroy_Akasha_System
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Life_Short_While_Knowledge_Endless
+			
+		}
+		x = 19
+		y = 7
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Disband_Gilded_Brigades
+		icon = goal_SUM07
+		cost = 7.00  
+		prerequisite = {
+			focus = Money_and_Freedom
+		}
+		x = 20
+		y = 4
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Support_Lesser_Lord_Kusanali
+		icon = goal_SUM01
+		cost = 7.00  
+		prerequisite = {
+			focus = Hold_Sabzeruz_Festival
+		}
+		mutually_exclusive = {
+			focus = Miss_Dendro_Archon
+			
+		}
+		x = 26
+		y = 1
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = genshin popularity = 0.1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = The_Sailors_of_Port_Omos_Rise_up
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Support_Lesser_Lord_Kusanali
+		}
+		x = 26
+		y = 2
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = genshin popularity = 0.05 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = -0.2
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Ask_the_Adventurers_Association
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = The_Sailors_of_Port_Omos_Rise_up
+		}
+		x = 24
+		y = 3
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = genshin popularity = 0.1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Ask_Lanaro_for_Help
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = The_Sailors_of_Port_Omos_Rise_up
+		}
+		x = 28
+		y = 3
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = genshin popularity = 0.1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Cannon_Sound_in_Jeongseon_Palace
+		icon = goal_DOT01
+		cost = 7.00  
+		prerequisite = {
+			focus = Ask_Lanaro_for_Help
+		}
+		prerequisite = {
+			focus = Ask_the_Adventurers_Association
+		}
+		x = 26
+		y = 4
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = genshin popularity = 0.1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Support_Suanism
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Reform_Akademiya
+		}
+		x = 27
+		y = 7
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Miss_Dendro_Archon
+		icon = goal_SUM01
+		cost = 7.00  
+		prerequisite = {
+			focus = Hold_Sabzeruz_Festival
+		}
+		mutually_exclusive = {
+			focus = Support_Lesser_Lord_Kusanali
+		}
+		x = 34
+		y = 1
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Dendro_Archon_Idolatry
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Miss_Dendro_Archon
+		}
+		x = 34
+		y = 2
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Establish_Dendro_Archon_Church
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Dendro_Archon_Idolatry
+		}
+		x = 32
+		y = 3
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = The_System_of_the_Sage_Meeting
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Dendro_Archon_Idolatry
+		}
+		x = 36
+		y = 3
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Kill_Lesser_Lord_Kusanali
+		icon = goal_DOT01
+		cost = 7.00  
+		prerequisite = {
+			focus = The_System_of_the_Sage_Meeting
+		}
+		prerequisite = {
+			focus = Establish_Dendro_Archon_Church
+		}
+		x = 34
+		y = 4
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = -0.2
+		add_war_support = 0.01
+		}
+
+	}
+	
+	focus = {
+		id = The_Dance_of_Flower_Godness
+		icon = goal_SUM08
+		cost = 7.00  
+		prerequisite = {
+			focus = Kill_Lesser_Lord_Kusanali
+			focus = Cannon_Sound_in_Jeongseon_Palace
+		}
+		x = 30
+		y = 5
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		hold_election = SUM
+		country_event = { id = super.12  days = 10 }
+		remove_ideas = { The_Imprisoned_God	}
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Establish_Troop_Forest_Rangers
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Sumeru_Military_Construction
+		}
+		x = 37
+		y = 7
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Develop_the_Port_of_Omos
+		icon = goal_SUM10
+		cost = 7.00  
+		prerequisite = {
+			focus = SUM_Construction_Project
+		}
+		x = 40
+		y = 4
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Rebuild_Wind_Discipline_Officer_Unit
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Sumeru_Military_Construction
+		}
+		x = 41
+		y = 7
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Rainforest_Protection_Programme
+		icon = goal_SUM10
+		cost = 7.00  
+		prerequisite = {
+			focus = SUM_Construction_Project
+		}
+		x = 44
+		y = 4
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_ideas = { Deepwood_Memories }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Develop_Akasha_System
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Life_Short_While_Knowledge_Endless
+		}
+		x = 23
+		y = 7
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Mining_the_World_Tree
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Life_Short_While_Knowledge_Endless
+		}
+		x = 21
+		y = 8
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Support_Biophysicism
+		icon = goal_SUM03
+		cost = 7.00  
+		prerequisite = {
+			focus = Reform_Akademiya
+		}
+		x = 30
+		y = 7
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Invitation_Tighnari
+		icon = goal_SUM03
+		cost = 7.00  
+		prerequisite = {
+			focus = Support_Biophysicism
+		}
+		x = 30
+		y = 8
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_ideas = { Vulpes_Zerda }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+
+	focus = {
+		id = Establish_One_New_Sumeru
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Invitation_Tighnari
+		}
+		prerequisite = {
+			focus = Mining_the_World_Tree
+		}
+		prerequisite = {
+			focus = Sumeru_Flying_Competition
+		}
+		x = 30
+		y = 10
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		load_focus_tree = generic_focus
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Support_Epistemology
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Reform_Akademiya
+		}
+		x = 33
+		y = 7
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Sumeru_of_Red_King
+		icon = goal_SUM09
+		cost = 7.00  
+		prerequisite = {
+			focus = The_Dream_of_Desert_Dwellers
+		}
+		x = 45
+		y = 7
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = Sumeru_Flying_Competition
+		icon = goal_SUM10
+		cost = 7.00  
+		prerequisite = {
+			focus = Rebuild_Wind_Discipline_Officer_Unit
+		}
+		prerequisite = {
+			focus = Establish_Troop_Forest_Rangers
+		}
+		x = 39
+		y = 8
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		add_ideas = { Sumeru_Flying_champion }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = FON
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Sumeru_Flying_Competition
+		}
+		x = 37
+		y = 9
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		declare_war_on = { target = FON  type = annex_everything }
+		every_state = { limit = { is_core_of = FON } add_core_of = ROOT }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = LYY
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Sumeru_Flying_Competition
+		}
+		x = 39
+		y = 9
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		declare_war_on = { target = LYY  type = annex_everything }
+		every_state = { limit = { is_core_of = LYY } add_core_of = ROOT }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = NAT
+		icon = goal_SUM02
+		cost = 7.00  
+		prerequisite = {
+			focus = Sumeru_Flying_Competition
+		}
+		x = 41
+		y = 9
+		completion_reward = {   
+		custom_effect_tooltip = Spend_One_Million_Mora  add_to_variable = { var = dx value = -1 }
+		declare_war_on = { target = NAT  type = annex_everything }
+		every_state = { limit = { is_core_of = NAT } add_core_of = ROOT }
+		add_political_power = 10
+		add_manpower = 100
+		add_fuel = 10
+		army_experience = 5
+		air_experience =  5
+		navy_experience = 5
+		add_stability = 0.01
+		add_war_support = 0.01
+		}
+
+	}
+}

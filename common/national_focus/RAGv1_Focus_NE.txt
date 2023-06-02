@@ -1,0 +1,909 @@
+focus_tree = {
+	id = RAGv1_Neutrality
+	country = { 
+	factor = 0		
+	modifier = { add = 10  tag = RAGN }
+	}
+	default = no
+
+	#旧制
+	#让蒙德再次伟大
+	focus = {
+		id = RAG_Make_MOT_Great_Again
+		icon = goal_RAGfjral
+		cost = 5.00
+		x = 23
+		y = 2
+		prerequisite = {
+			focus = Aristocratic_Young_Lord
+		}
+		available = { OR = {
+						original_tag = RAG
+					 }   }
+		mutually_exclusive = {
+
+		}
+		completion_reward = {   
+		
+		country_event = { id = RAG_Neutrality_Event.1  days = 5  }  
+		add_ideas = { Heroes_of_Night }
+		remove_ideas = { For_Knight	}					
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+						}
+		set_popularities = {
+		neutrality = 50
+		communism = 15
+		democratic = 10
+		fascism = 10
+		genshin = 05
+						}
+		create_country_leader = {
+		name = "Diluc"
+		desc = "Diluc_desc"
+		picture = "gfx/leaders/LY/Diluc.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = { }
+		}
+		set_political_party = {
+    		ideology = neutrality
+    		popularity = 80
+		}
+		set_country_flag = RAG_Wash_decision_categories_II
+		custom_effect_tooltip = RAG_Wash_decision_begin
+		if = {
+				limit = {
+					MOT = { is_ai = yes  has_government = neutrality }
+					RAG = { is_ai = no }
+				}
+		annex_country = { target = MOT }
+		}
+		if = {
+				limit = {
+					MOT = { is_ai = yes  has_government = communism }
+					RAG = { is_ai = no }
+				}
+		annex_country = { target = MOT }
+		}
+		if = {
+				limit = {
+					TAG = MOT
+					RAG = { is_ai = yes }
+				}
+		annex_country = { target = RAG }
+		}
+				}
+	}
+
+	#组建夜枭商会
+	focus = {
+		id = RAG_Form_MOT_Merchant_Association
+		icon = goal_RAGj
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Make_MOT_Great_Again
+		}
+		x = 20
+		y = 3
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.2  days = 5  }   
+		add_political_power = 160 add_manpower = 64800
+		#country_event = { id = RAG_Neutrality_Event.1  days = 10  }
+		}
+	}
+	#联系北国银行
+	focus = {
+		id = RAG_Contact_Northland_Bank
+		icon = goal_RAGz
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Form_MOT_Merchant_Association
+		}
+		x = 20
+		y = 4
+		completion_reward = {   
+				country_event = { id = RAG_Neutrality_Event.3  days = 5  }  		 
+				add_political_power = 120
+				#add_ideas = CHI_forced_conscription
+				create_faction = RAG-SNE
+				add_to_faction = SNE
+				    }
+	}
+	#罗莎琳部长
+	focus = {
+		id = RAG_Secretary_Rosalynn
+		icon = goal_RAGtjea
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Contact_Northland_Bank
+		}
+		x = 20
+		y = 5
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.4  days = 5  }    
+		add_research_slot = 1
+		add_ideas = CHI_legislative_yuan
+		}
+
+	}
+	#开办苍风军校
+	focus = {
+		id = RAG_Open_Cangfeng_Military_School
+		icon = goal_RAGtjie
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Make_MOT_Great_Again
+		}
+		x = 23
+		y = 3
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.5  days = 5  }   
+		add_war_support = 0.10
+		add_ideas = gene_military_innovation
+ }
+
+	}
+	#法尔加舰事件
+	focus = {
+		id = RAG_The_Incident_With_the_USS_Falga
+		icon = goal_RAGx
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Open_Cangfeng_Military_School
+		}
+		x = 23
+		y = 4
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.6  days = 5  }     
+		add_offsite_building = { type = dockyard level = 1 }
+		navy_experience = 25
+		add_ideas = CHI_train_marines	
+	}
+	}
+	#纳塔军事训练
+	focus = {
+		id = RAG_Natlan_Military_Training
+		icon = goals_RAGejiowqjeoqwt
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Incident_With_the_USS_Falga
+		}
+		x = 23
+		y = 5
+		completion_reward = {   
+		add_ideas = PRI_Vision_Pyro	  
+		army_experience = 25 air_experience = 25 navy_experience = 25
+		#country_event = { id = RAG_Neutrality_Event.2  days = 10  }
+		country_event = { id = RAG_Neutrality_Event.10  days = 5  } 
+		}
+	}
+	#蒙德之命运
+	focus = {
+		id = RAG_The_Fate_of_the_MOT
+		icon = goal_RAGtjel
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Make_MOT_Great_Again
+		}
+		x = 26
+		y = 3
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.11  days = 5  }   		
+		add_political_power = 60  add_stability = 0.05
+		#country_event = { id = RAG_Neutrality_Event.3  days = 10  }
+		}
+	}
+	#至冬留学生
+	focus = {
+		id = RAG_International_Students_To_SNE
+		icon = goal_RAGtesjg
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Fate_of_the_MOT
+		}
+		x = 26
+		y = 4
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.12  days = 5  }   
+		army_experience = 25
+		add_ideas = CHI_executive_yuan
+		}
+	}
+	#迪卢克日记
+	focus = {
+		id = RAG_Diary_of_Diluc
+		icon = goal_RAGtjsfg
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_International_Students_To_SNE
+		}
+		x = 26
+		y = 5
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.13  days = 5  }    
+		add_political_power = 160 add_manpower = 64800	
+		#country_event = { id = RAG_Neutrality_Event.4  days = 10  }
+		}
+	}
+	#第一次蒙德统一战争
+	focus = {
+		id = RAG_The_First_MOT_Unification_War
+		icon = goals_RAGwewrqwjtisaf
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Natlan_Military_Training
+		}
+		prerequisite = {
+			focus = RAG_Diary_of_Diluc
+		}
+		prerequisite = {
+			focus = RAG_Secretary_Rosalynn
+		}
+		x = 23
+		y = 6
+		completion_reward = {     
+		leave_faction = yes	
+		add_political_power = 50
+		add_ideas = gene_one_leader
+		Add_Mond_Cores = yes
+		every_state = { limit = { is_core_of = MOT } add_core_of = ROOT }
+		#set_country_flag = RAG_Wash_decision_categories_II
+		#custom_effect_tooltip = RAG_Wash_decision_begin
+		country_event = { id = RAG_Neutrality_Event.14  days = 5  } 
+		}
+
+	}
+	#西征奔狼领
+	focus = {
+		id = RAG_Head_West_To_the_Wolves
+		icon = goal_RAGsjta
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_First_MOT_Unification_War
+		}
+		x = 20
+		y = 7
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.15  days = 5  }  
+		army_experience = 25 air_experience = 25
+		MOT = { end_puppet = AND }
+		leave_faction = yes			
+		create_wargoal = { type = puppet_wargoal_focus  target = AND }
+	} }
+	#东征清泉镇
+	focus = {
+		id = RAG_Head_east_To_Clear_Spring
+		icon = goal_RAGtwjes
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_First_MOT_Unification_War
+		}
+		x = 26
+		y = 7
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.16  days = 5  }  
+		MOT = { end_puppet = SPI }
+		leave_faction = yes	
+		create_wargoal = { type = annex_everything	target = SPI }
+		army_experience = 25 air_experience = 25
+		add_ideas = CHI_elite_mountaineers	
+	}
+	}
+	#夜枭国民政府
+	focus = {
+		id = RAG_Nite_Owl_National_Government
+		icon = goals_RAGwejwiqotjaoga
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Head_east_To_Clear_Spring
+		}
+		prerequisite = {
+			focus = RAG_Head_West_To_the_Wolves
+		}
+		x = 23
+		y = 8
+		completion_reward = {   
+		set_cosmetic_tag = RAG_Nite_Owl_National_Government
+		country_event = { id = RAG_Neutrality_Event.17  days = 5  } 		
+		add_political_power = 160 
+		if = {  limit = { original_tag = MOT  }
+          MOT = { end_puppet = RAG }		
+		create_wargoal = { type = annex_everything	target = RAG }
+		}
+		if = {  limit = { original_tag = RAG  } 
+	     MOT = { end_puppet = RAG }	
+		create_wargoal = { type = annex_everything	target = MOT }	
+	     }	
+		add_manpower = 64800
+		clr_country_flag = RAG_Wash_decision_categories_II
+		custom_effect_tooltip = RAG_Wash_decision_over
+		}
+	}
+
+	#兄弟外御其悔
+	focus = {
+		id = RAG_Brother_Can_Uniformly_Resist_Others_Bully
+		icon = goals_RAGweqjtiojaoafgae
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Nite_Owl_National_Government
+		}
+		x = 19
+		y = 9
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.18  days = 5  }  
+		create_faction = For_MOT
+		add_political_power = 120
+		add_to_faction = LAW
+		add_ideas = CHI_war_of_resistance
+		}
+	}
+	#攘外必先安内
+	focus = {
+		id = RAG_Resisting_Foreign_Aggression_Home_Safe
+		icon = goals_RAGwejqitoasdasg
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Nite_Owl_National_Government
+		}
+		x = 27
+		y = 9
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.19  days = 5  } 				
+		create_faction = For_MOT
+		add_political_power = 120
+		add_ideas = CHI_war_of_national_liberation
+		}
+	}
+	#西北易帜
+	focus = {
+		id = RAG_Changing_Northwestern_Banner
+		icon = goals_RAGmsajdjag
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Resisting_Foreign_Aggression_Home_Safe
+		}
+		x = 29
+		y = 10
+		completion_reward = {    
+		create_wargoal = { type = annex_everything	target = DVA }	
+		army_experience = 25 air_experience = 25 navy_experience = 25
+		country_event = { id = RAG_Neutrality_Event.20  days = 5  }
+				    }
+	}
+
+	#天理战争宣传
+	focus = {
+		id = RAG_War_Propaganda_For_the_PRI
+		icon = goals_RAGqwejoqwrjoasg
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Brother_Can_Uniformly_Resist_Others_Bully
+		}
+		x = 19
+		y = 10
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.21  days = 5  }  
+		add_war_support = 0.15  add_stability = -0.05
+		add_ideas = CHI_construction_battalions
+		}
+	}
+	#南方会议
+	focus = {
+		id = RAG_The_Southern_Meeting
+		icon = goal_RAGl
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_War_Propaganda_For_the_PRI
+		}
+		x = 17
+		y = 11
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.22  days = 5  }  
+		add_political_power = 160 add_manpower = 64800
+		#country_event = { id = RAG_Neutrality_Event.5  days = 10  }
+		}
+
+	}
+	#云来海航线
+	focus = {
+		id = RAG_The_Course_of_the_Clouds
+		icon = goals_RAGweqwajrwigjdijxvcz
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Southern_Meeting
+		}
+		mutually_exclusive = {
+			focus = RAG_Stone_Gate_Crisis
+		}
+		x = 16
+		y = 12
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {  
+		leave_faction = yes	
+		add_fuel = 400
+		create_faction = RAG-LYY		
+		add_to_faction = LYY
+				    }
+
+	}
+	#石门危机
+	focus = {
+		id = RAG_Stone_Gate_Crisis
+		icon = goals_RAGweqwjiojwqtsdsf
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Southern_Meeting
+		}
+		mutually_exclusive = {
+			focus = RAG_The_Course_of_the_Clouds
+		}
+		x = 18
+		y = 12
+		ai_will_do = {
+			factor = 9
+		}
+		completion_reward = {    
+		start_border_war = { 
+    change_state_after_war = no
+    attacker = { state = 63  num_provinces = 1 }			
+    defender = { state = 131  num_provinces = 1 }
+}
+}
+	}
+	#征服世界，先璃月
+	focus = {
+		id = RAG_To_Conquer_the_World_Must_First_Conquer_Liyue
+		icon = goals_RAGweqtjiascn
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Stone_Gate_Crisis
+		}
+		x = 18
+		y = 13
+		completion_reward = {   
+		 
+		create_wargoal = { type = annex_everything	target = LYY }	
+		create_wargoal = { type = annex_everything	target = SHP }	
+		create_wargoal = { type = annex_everything	target = KQP }	
+		create_wargoal = { type = annex_everything	target = GYP }	
+		create_wargoal = { type = annex_everything	target = BRF }	
+		army_experience = 25 air_experience = 25 navy_experience = 25
+				    }
+
+	}
+	#提瓦特西北主战场
+	focus = {
+		id = RAG_Main_northwest_Battlefield_of_Teyvat
+		icon = goals_RAGewrjiowejot
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Dandelion_Sea_Militia_Against_Sky
+			focus = RAG_To_Conquer_the_World_Must_First_Conquer_Liyue
+			focus = RAG_Fontaine_Railway_Technology
+		}
+		x = 19
+		y = 14
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.23  days = 5  }  
+		create_wargoal = { type = annex_everything	target = PRI }	
+		army_experience = 25 air_experience = 25 navy_experience = 25
+		
+				    }
+
+	}
+	#黎明战法
+	focus = {
+		id = RAG_Tactics_of_the_Dawn
+		icon = goals_RAGweqrjoiasjgag
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Main_northwest_Battlefield_of_Teyvat
+		}
+		x = 17
+		y = 15
+		completion_reward = {     
+		army_experience = 25 air_experience = 25 navy_experience = 25
+		country_event = { id = RAG_Neutrality_Event.24  days = 5  } 
+		}
+	}
+	#鹰翔口决议
+	focus = {
+		id = RAG_Eagle_Flying_Mouth_Resolution
+		icon = goals_RAGweqeoajroiawtawe
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Tactics_of_the_Dawn
+		}
+		x = 17
+		y = 16
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.25  days = 5  }   
+		add_political_power = 160 add_manpower = -64800
+		add_ideas = CHI_forced_conscription
+		}
+	}
+	#蒙德-至冬友好同盟互助条约
+	focus = {
+		id = RAG_MOT-SNE_Treaty_of_Friendship
+		icon = goals_RAGweqwrawjotjawt
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Main_northwest_Battlefield_of_Teyvat
+		}
+		x = 21
+		y = 15
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.26  days = 5  }   
+		leave_faction = yes	
+				       add_political_power = 120
+
+					   create_faction = RAG-SNE
+					   add_to_faction = SNE
+				    }
+
+	}
+	#须弥远征军
+	focus = {
+		id = RAG_SUM_Expeditionary_Force
+		icon = goals_RAGejiowqjeoqwt
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_MOT-SNE_Treaty_of_Friendship
+		}
+		x = 20
+		y = 16
+				completion_reward = {   
+				country_event = { id = RAG_Neutrality_Event.27  days = 5  }   
+		
+				       add_political_power = 120
+					   add_to_faction = SUM
+				    }
+
+	}
+	#风龙废墟问题
+	focus = {
+		id = RAG_Dragon_Ruins_Problem
+		icon = goal_RAGc
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_MOT-SNE_Treaty_of_Friendship
+		}
+		x = 22
+		y = 16
+		completion_reward = {    
+		add_war_support = 0.1
+		country_event = { id = RAG_Neutrality_Event.28  days = 5  } 
+	     create_wargoal = { type = annex_everything	target = DVA }	
+	}
+	}
+	#起风地谈判
+	focus = {
+		id = RAG_Negotiations_in_the_Wind
+		icon = goal_RAGa
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_War_Propaganda_For_the_PRI
+		}
+		x = 21
+		y = 11
+		completion_reward = {   
+	     country_event = { id = RAG_Neutrality_Event.29  days = 5  }
+	add_to_faction = DVA
+	set_technology = {	improved_submarine_snorkel = 1 }   	
+	if = {  limit = { original_tag = MOT  }   
+    set_state_owner = 5
+	set_state_owner = 6
+	set_state_owner = 7
+	set_state_controller = 5
+	set_state_controller = 6
+	set_state_controller = 7
+
+     }
+		}
+
+	}
+	#蒙德新编革命第七军
+	focus = {
+		id = RAG_The_7th_Revolutionary_Army_Newly_Formed_By_MOT
+		icon = goals_RAGwejiejaot
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Negotiations_in_the_Wind
+		}
+		x = 21
+		y = 12
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.30  days = 5  }  
+		army_experience = 25 air_experience = 25
+		add_ideas = CHI_wargaming_division	
+	}
+	}
+	#寂烬海抗天义勇军
+	focus = {
+		id = RAG_The_Dandelion_Sea_Militia_Against_Sky
+		icon = goals_RAGjeiwjqota
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_7th_Revolutionary_Army_Newly_Formed_By_MOT
+		}
+		x = 21
+		y = 13
+		completion_reward = {   
+		country_event = { id = RAG_Neutrality_Event.31  days = 5  }   
+		add_political_power = 160 add_manpower = 64800
+		#country_event = { id = RAG_Neutrality_Event.6  days = 10  }
+		}
+	}
+	#星落湖会议
+	focus = {
+		id = RAG_Starfall_Lake_Conference
+		icon = goal_RAGl
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Resisting_Foreign_Aggression_Home_Safe
+		}
+		
+		x = 26
+		y = 10
+		completion_reward = {   
+		
+		set_state_owner = 10
+	    set_state_controller = 10
+		}
+
+	}
+	#禁止抵抗命令
+	focus = {
+		id = RAG_No_Resistance_Order
+		icon = goals_RAGweqjtsmgwewqjt
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Starfall_Lake_Conference
+		}
+		x = 25
+		y = 11
+		completion_reward = {   
+		
+		   
+		add_political_power = 160 add_manpower = 64800
+		add_ideas = CHI_public_works		
+		}
+	}
+	#果酒湖和约
+	focus = {
+		id = RAG_Peace_of_Fruit_Wine_Lake
+		icon = focus_generic_coastal_fort
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_No_Resistance_Order
+		}
+		x = 25
+		y = 12
+		completion_reward = {   
+		 
+		set_state_owner = 17
+		set_state_controller = 17
+		add_ideas = CHI_land_value_tax
+		}
+	}
+	#量蒙德之物力
+	focus = {
+		id = RAG_The_Amount_of_the_Material_To_MOT
+		icon = goals_RAGfjgxcnva
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Peace_of_Fruit_Wine_Lake
+		}
+		x = 25
+		y = 13
+		completion_reward = {   
+		  
+		add_political_power = 160 add_manpower = -64800
+		#country_event = { id = RAG_Neutrality_Event.7  days = 10  }
+		}
+	}
+	#肃杀冒险者协会
+	focus = {
+		id = RAG_The_Exterminating_Adventurers
+		icon = goals_RAGsadwqjeaosgjiot
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Starfall_Lake_Conference
+		}
+		x = 27
+		y = 11
+		completion_reward = {     
+		add_offsite_building = { type = arms_factory level = 1 } 
+		add_manpower = -64800 }
+
+	}
+	#风起地事变
+	focus = {
+		id = RAG_The_Coup_in_the_Wind
+		icon = goals_RAGwewrqwjtisaf
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Exterminating_Adventurers
+		}
+		x = 27
+		y = 12
+		completion_reward = {   
+		 
+		create_wargoal = { type = annex_everything	target = DRA }
+	}
+	}
+	#石头要过刀
+	focus = {
+		id = RAG_The_Stone_Will_Pass_the_knife
+		icon = goals_RAGweqrijwoajfoiasjtw
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Coup_in_the_Wind
+		}
+		x = 27
+		y = 13
+		completion_reward = {    
+		every_state = { limit = { is_core_of = RAG } add_core_of = ROOT }
+	     create_wargoal = { type = annex_everything	target = LAW }
+	}
+
+	}
+	#大决战
+	focus = {
+		id = RAG_Armageddon
+		icon = goal_RAG02
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Knot_of_Foreign_happy
+		}
+		prerequisite = {
+			focus = RAG_The_Stone_Will_Pass_the_knife
+		}
+		prerequisite = {
+			focus = RAG_The_Amount_of_the_Material_To_MOT
+		}
+		x = 27
+		y = 14
+		completion_reward = {    
+		army_experience = 25 air_experience = 25 navy_experience = 25
+		
+				    }
+
+	}
+	#撕毁果酒湖和约
+	focus = {
+		id = RAG_Tear_Up_the_Peace_of_Cider_Lake
+		icon = goals_RAGwejoasjofawjt
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Armageddon
+		}
+		x = 27
+		y = 15
+		completion_reward = {    
+		create_wargoal = { type = annex_everything	target = ABY }
+				    }
+	}
+	#千古完人
+	focus = {
+		id = RAG_The_One_Is_Perfect
+		icon = goals_RAGweqtjioajgoawe
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Tear_Up_the_Peace_of_Cider_Lake
+		}
+		x = 27
+		y = 16
+		completion_reward = {   
+          		
+		add_stability = 0.1 }
+
+	}
+	#灰色的风起地
+	focus = {
+		id = RAG_The_Gray_Wind_Rises
+		icon = goals_RAGaweqjotjcxzg
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_One_Is_Perfect
+		}
+		prerequisite = {
+			focus = RAG_Dragon_Ruins_Problem
+		}
+		prerequisite = {
+			focus = RAG_SUM_Expeditionary_Force
+		}
+		prerequisite = {
+			focus = RAG_Eagle_Flying_Mouth_Resolution
+		}
+
+		x = 23
+		y = 17
+		completion_reward = {    
+	add_timed_idea = { idea = For_Venti  days = 365 }	
+create_wargoal = { type = puppet_wargoal_focus  target = SNE }	
+create_wargoal = { type = puppet_wargoal_focus  target = NAT }	
+create_wargoal = { type = puppet_wargoal_focus  target = FON }	
+create_wargoal = { type = puppet_wargoal_focus  target = SUM }	
+create_wargoal = { type = puppet_wargoal_focus  target = INA }
+create_wargoal = { type = puppet_wargoal_focus  target = SAN }	
+
+	
+	}
+
+	}
+	#发动北陆大战
+	focus = {
+		id = RAG_Start_the_Great_Northern_War
+		icon = goals_RAGewqwqojtiowq
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Changing_Northwestern_Banner
+		}
+		x = 29
+		y = 11
+		completion_reward = {   
+		 
+		create_wargoal = { type = annex_everything	target = MOT }
+		create_wargoal = { type = annex_everything	target = FAV }
+		army_experience = 25 air_experience = 25 navy_experience = 25
+		add_ideas = CHI_modern_logistics
+				    }
+	}
+	#善后大借款
+	focus = {
+		id = RAG_Big_Loans_To_Clean_Up_the_Mess
+		icon = goal_RAGd
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Start_the_Great_Northern_War
+		}
+		x = 29
+		y = 12
+		completion_reward = {     
+	add_political_power = -160
+	add_stability = 0.05
+	add_manpower = 64800
+	}
+
+	}
+	#结北国之欢心
+	focus = {
+		id = RAG_Knot_of_Foreign_happy
+		icon = goal_RAGsfg
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_Big_Loans_To_Clean_Up_the_Mess
+		}
+		x = 29
+		y = 13
+		completion_reward = {     
+	add_equipment_to_stockpile = { type = infantry_equipment  amount = 10000  producer = SNE }
+	}
+	}
+	#枫丹铁路技术
+	focus = {
+		id = RAG_Fontaine_Railway_Technology
+		icon = goals_RAGweqtjias
+		cost = 5.00
+		prerequisite = {
+			focus = RAG_The_Course_of_the_Clouds
+		}
+		x = 16
+		y = 13
+		completion_reward = {    
+		leave_faction = yes	
+		add_fuel = 400		
+		add_to_faction = FON
+				    }
+	}
+	
+	
+	}
