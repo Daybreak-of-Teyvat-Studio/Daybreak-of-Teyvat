@@ -8,7 +8,7 @@
 
 
 ## 我不小心把错误的修改Push到了github上，怎么办？
-- 在history中找到你错误的commit，右键选择`Rever changes in commit`。软件将会帮你生成一个撤回修改的提交，此时再Push到GitHub上，就可以把你刚刚的错误修改撤销了。
+- 在history中找到你错误的commit，右键选择`Revert changes in commit`。软件将会帮你生成一个撤回修改的提交，此时再Push到GitHub上，就可以把你刚刚的错误修改撤销了。
 - 注意，一旦修改提交到GitHub上，即使后面使用Revert撤销修改，也是会留下记录的
 
 
