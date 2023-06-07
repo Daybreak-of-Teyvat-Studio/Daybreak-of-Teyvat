@@ -4,6 +4,7 @@
 - `doc文件夹`: 一些开发相关的文档
 - `src文件夹`: mod相关的所有文件
 - `.gitignore`: 不用关注
+- `ugc_dot_git_version.mod`: 用于git仓库代码调试的mod描述文件
 - `README.md`: 一些流程介绍及教程
 
 
@@ -21,6 +22,17 @@
     [pull]
         rebase = true
     ```
+- 如何使用git仓库内的代码进行调试
+  - 将`ugc_dot_git_version.mod`复制至钢4的mod目录下，如下是一个参考，具体取决于你的本地路径
+    ```
+    C:\Users\your_name\Documents\Paradox Interactive\Hearts of Iron IV\mod
+    ```
+  - 将钢4mod目录的下`ugc_dot_git_version.mod`中的`path`修改为`本地仓库路径/src`，例如
+    ```
+    path="D:/code/hoi4mod/Daybreak-of-Teyvat/src"
+    ```
+  - 启动钢4时，使用名为“**Daybreak of Teyvat | Git Version**”的mod进行调试
+
 ## 开发流程
 可参考群内的演示录屏
 1. 本地修改开发
