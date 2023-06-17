@@ -1,8 +1,0 @@
-﻿l_english:
-
-####################
-DOT_food_equipment:0 "粮食"
-DOT_food_equipment_1:0 "粮食"
-DOT_food_equipment_desc:0 "粮食"
-DOT_food_equipment_1_desc:0 "粮食"
-DOT_food_BASE:0 "\n__________________________________\n\n国家粮库总量：§Y[?food_stock]§! 百万吨粮食\n国家粮食产量：§Y[?food_production]§! 百万吨粮食\n粮食生产效率：§Y[?food_production_efficiency]§! 工农业等级\n国家粮食进口：§Y[?food_imported]§! 百万吨粮食\n总体粮食消耗：§Y[?food_cost]§! 百万吨粮食\n工业粮食消耗：§Y[?food_consumed]§! 百万吨粮食\n国家粮食出口：§Y[?food_exported]§! 百万吨粮食\n军用粮食消耗：§Y[?food_consumption_1]§! 百万吨粮食\n民用粮食消耗：§Y[?food_consumption_2]§! 百万吨粮食\n__________________________________\n"
